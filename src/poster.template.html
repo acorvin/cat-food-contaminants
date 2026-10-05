@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contaminants in Cat Food, 2026 (overview)</title>
+<meta name="description" content="An interactive one-screen overview of what an independent laboratory found when the Clean Label Project tested 100 cat foods from 62 brands. A data study by Alex Corvin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#ffffff;
+  --ink:#1c1e21;
+  --ink-2:#55585e;
+  --ink-3:#6f7379;
+  --hair:#d6d7d4;
+  --post:#ad7620;
+  --telegraph:#914355;
+  --radio:#009080;
+  --internet:#6172be;
+  --f:"Geist", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"Geist Mono", ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--ground);color:var(--ink);overflow:hidden}
+body{font-family:var(--f);-webkit-font-smoothing:antialiased;position:relative}
+#poster{position:absolute;left:0;top:0;transform-origin:0 0;background:var(--ground)}
+#poster svg{position:absolute;left:0;top:0}
+svg text{font-family:var(--f);fill:var(--ink)}
+svg{overflow:visible}
+.k{font-family:var(--f-mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;fill:var(--ink-3)}
+.t1{font-size:42px;font-weight:300;letter-spacing:-.03em}
+.t1m{font-size:23px;font-weight:300;letter-spacing:-.025em}
+.dk{font-size:14.5px;fill:var(--ink-2)}
+.cv{font-size:14.5px;font-weight:500;fill:var(--ink)}
+.nm0{font-size:13.5px}
+.nm0 .sfx{fill:var(--ink-3)}
+.nm{font-size:13px;fill:var(--ink-2)}
+.nm3{font-size:12.5px;fill:var(--ink-3)}
+.val{font-size:17px;font-weight:300;letter-spacing:-.02em}
+.big{font-size:32px;font-weight:300;letter-spacing:-.03em}
+.md{font-size:14px;letter-spacing:-.01em}
+.ax{font-family:var(--f-mono);font-size:11px;fill:var(--ink-3)}
+.hair{stroke:var(--hair);stroke-width:1}
+.vg{stroke:var(--hair);stroke-width:.8}
+.one{stroke:#8b8e93;stroke-width:1}
+.col.dim{opacity:.35}
+.col{transition:opacity .12s}
+.ro1{font-size:15px;font-weight:500;letter-spacing:-.01em}
+.ro2{font-size:13.5px;fill:var(--ink-2)}
+.ro3{font-size:12px;fill:var(--ink-3)}
+.lnk{font-size:12.5px;fill:var(--ink-2);text-decoration:underline;text-decoration-color:var(--ink-3);text-underline-offset:3px}
+a:focus-visible text{outline:1px solid var(--ink)}
+.btn{cursor:pointer}
+.btn rect{fill:var(--ground);stroke:var(--ink);stroke-width:1}
+.btn text{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;fill:var(--ink)}
+.btn:hover rect,.btn:focus-visible rect{fill:var(--ink)}
+.btn:hover text,.btn:focus-visible text{fill:var(--ground)}
+.btn:focus-visible{outline:none}
+.tab{cursor:pointer}
+.tab text{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;fill:var(--ink-3)}
+.tab.on text{fill:var(--ink)}
+.tab line{stroke:transparent;stroke-width:2}
+.tab.on line{stroke:var(--ink)}
+.hit{fill:transparent;cursor:pointer}
+.hit:focus-visible{outline:1px solid var(--ink);outline-offset:-1px}
+
+#over{position:absolute;z-index:5;background:var(--ground);padding:36px 40px;overflow:auto;font-size:12px;color:var(--ink-2)}
+#over[hidden]{display:none}
+#over .oh{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 20px;margin-bottom:18px}
+#over h2{margin:0;font-weight:300;font-size:22px;letter-spacing:-.02em;color:var(--ink)}
+#over .og{display:grid;gap:14px 40px}
+#over h3{margin:0 0 6px;font-family:var(--f-mono);font-size:10px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+#over table{width:100%;border-collapse:collapse}
+#over td{padding:3.5px 10px 3.5px 0;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.35}
+#over td.n{font-family:var(--f-mono);white-space:nowrap;color:var(--ink);text-align:right;padding-right:8px}
+#over td.s{font-family:var(--f-mono);white-space:nowrap;color:var(--ink-3);padding-right:0}
+#over .of{margin-top:14px;color:var(--ink-3);font-size:11.5px}
+#over .ob{display:flex;gap:8px;flex-shrink:0}
+#over button,#over a.dl{font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--ground);border:1px solid var(--ink);padding:6px 11px;cursor:pointer;text-decoration:none;line-height:1.2}
+#over button:hover,#over a.dl:hover{background:var(--ink);color:var(--ground)}
+@media (prefers-reduced-motion:reduce){.col{transition:none}}
+</style>
+</head>
+<body>
+<div id="poster">
+  <svg id="fig" role="group" aria-label="Interactive overview of the Clean Label Project's 2026 cat food findings. Rows can be focused with the keyboard, and a readout at the bottom gives each figure and where it was confirmed. A data table button lists every figure."></svg>
+  <div id="over" hidden role="dialog" aria-label="Every figure in the overview"></div>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+(function () {
+const rows = DATA;
+const by = b => rows.filter(r => r.block === b);
+const css = getComputedStyle(document.documentElement);
+const tok = k => css.getPropertyValue('--' + k).trim();
+const hex = h => { const n = parseInt(h.slice(1), 16); return [n >> 16, (n >> 8) & 255, n & 255]; };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const fmtN = v => String(v);
+const rng = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+
+const FAMS = [
+  {name: 'Heavy metals', color: tok('internet')},
+  {name: 'Glyphosate and its breakdown product', color: tok('radio')},
+  {name: 'Plastic chemicals', color: tok('telegraph')},
+  {name: 'Acrylamide', color: tok('post')}
+];
+const INK = tok('ink');
+const SOURCE = {R: 'the report', W: 'the study page', P: 'the press release', C: 'news coverage', N: 'Newsweek'};
+const from = src => 'Confirmed in ' + src.split(';').map(c => SOURCE[c]).join(', ') + '.';
+
+// ---- data
+const items = [];
+by('detection').forEach(r => {
+  let it = items.find(i => i.item === r.item);
+  if (!it) { it = {item: r.item, fam: FAMS.findIndex(f => f.name === r.group), solid: 0, trace: 0, src: r.sources}; items.push(it); }
+  if (r.measure === 'products_trace') it.trace += r.value; else it.solid += r.value;
+});
+items.forEach(i => { i.total = i.solid + i.trace; });
+items.sort((a, b) => a.fam - b.fam || b.total - a.total);
+
+const comps = by('comparison').map(r => ({
+  item: r.item, what: r.group, raw: r.value, assoc: r.measure === 'percent_higher',
+  v: r.measure === 'percent_higher' ? 1 + r.value / 100 : r.value,
+  fam: r.item === 'DEHP' ? 2 : r.item === 'Glyphosate' ? 1 : 0, src: r.sources
+}));
+const MULT = [
+  ['Fish-based wet vs wet made with other proteins', 'Fish-based wet vs other wet foods, a subset of the next row'],
+  ['Fish and seafood vs other proteins', 'Fish and seafood vs other proteins'],
+  ['Fish and seafood vs other products', 'Fish and seafood vs other foods'],
+  ['Dry vs wet or air-dried', 'Dry vs wet and air-dried'],
+  ['Highest-lead products vs the typical product', 'Highest-lead products vs the typical product'],
+  ['Canned and pouched vs bagged', 'Canned and pouched vs bagged']
+].map(([w, d]) => Object.assign({short: d}, comps.find(c => c.what === w)));
+const cpG = comps.find(c => c.assoc);
+
+const SR = by('standard');
+const sval = g => SR.find(r => r.group === g).value;
+const fans = [
+  {name: 'Poultry products', what: 'met the standard', pct: sval('Poultry products'), color: tok('ink-3'), src: SR.find(r => r.group === 'Poultry products').sources},
+  {name: 'Fish and seafood products', what: 'met the standard', pct: sval('Fish and seafood products'), color: tok('ink-3'), src: SR.find(r => r.group === 'Fish and seafood products').sources},
+  {name: 'Fish and seafood products', what: 'ranked among the highest for mercury', pct: sval('Fish and seafood products ranked among the highest for mercury'), color: FAMS[0].color, src: SR.find(r => r.item === 'Mercury').sources}
+];
+const gapPts = sval('Gap between poultry and fish and seafood'), ratio = sval('Poultry vs fish and seafood likelihood');
+const sample = by('sample').filter(r => r.group === 'Format');
+const sampleAll = by('sample').find(r => r.item === 'Products tested');
+const lead = items.find(i => i.item === 'Lead'), cad = items.find(i => i.item === 'Cadmium'), ars = items.find(i => i.item === 'Arsenic');
+const merWet = comps.find(c => c.item === 'Mercury' && /wet/.test(c.what));
+const mixText = sample.map(r => `${r.value} ${r.item === 'Dry' ? 'dry' : r.item === 'Wet' ? 'wet' : 'air-dried or freeze-dried'}`).join(', ');
+const LINKS = [
+  ['Report', 'https://cleanlabelproject.org/wp-content/uploads/clean-label-project-cat-food-study-2026.pdf'],
+  ['Study page', 'https://cleanlabelproject.org/cat-food-study/'],
+  ['CNN', 'https://www.cnn.com/2026/10/02/health/cat-food-toxins-wellness'],
+  ['Scripps', 'https://www.scrippsnews.com/science-and-tech/cat-food-investigation-finds-heavy-metals-pesticides-and-plastic-chemicals'],
+  ['Newsweek', 'https://www.newsweek.com/heavy-metals-in-cat-food-safer-brands-as-study-examines-toxic-materials-12519532']
+];
+const CARE = [
+  ['Which products or brands', 'Results for individual products have not been released. Each row of dots is a count and not a list of products.'],
+  ['How the substances overlap', "Each substance's rate is given separately, so the report cannot say how many products had all three metals, or none."],
+  ['How much, in absolute terms', 'The figures are rates and multiples, not amounts. The report says no regulatory limits apply, and its executive director told CNN the study does not determine whether a product will harm a cat.'],
+  ['How much products vary', 'Each product was tested from one batch, and the group sizes behind the multiples and shares are not published.']
+];
+const TRADE = 'The Clean Label Project told CNN that chicken did better on mercury and cadmium but ran higher on lead and herbicides, so no category was clean.';
+const STD_NOTE = "The standard is the Clean Label Project's own and is relative: each product is measured against the other cat foods in this study. It is not a safety limit, and the report says no regulatory limits apply.";
+const SFX = {'Dibutyl phthalate': 'all 26 at trace levels', 'Dihexyl phthalate': 'not found in any product', 'Acrylamide': '4 measurable, 24 at trace levels'};
+const DECK = `Lead was found in ${lead.total} of the 100 products, cadmium in ${cad.total} and arsenic in ${ars.total}. Among wet foods, the fish-based products carried about ${merWet.raw} times the mercury of wet foods made with other proteins.`;
+
+// ---- stage
+const poster = document.getElementById('poster'), svg = document.getElementById('fig'), over = document.getElementById('over');
+const NS = 'http://www.w3.org/2000/svg';
+const DESK = {w: 1600, h: 900}, MOB = {w: 420, h: 880};
+let mode = 'desk', Wd = DESK.w, Hd = DESK.h, SC = 1, RES = 1, tab = 0, glyphs = [], hoverG = null, pinG = null, roNodes = null, ptr = false;
+
+const el = (tag, attrs, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); (parent || svg).appendChild(n); return n; };
+const txt = (parent, cls, x, y, s, extra) => { const t = el('text', Object.assign({'class': cls, x, y}, extra || {}), parent); t.textContent = s; return t; };
+const wrap = (text, n) => text.split(' ').reduce((ls, w) => { const l = ls[ls.length - 1]; if (l && (l + ' ' + w).length <= n) ls[ls.length - 1] = l + ' ' + w; else ls.push(w); return ls; }, []);
+const para = (parent, cls, x, y, text, n, lh) => { const ls = wrap(text, n), t = el('text', {'class': cls, x, y}, parent); ls.forEach((l, i) => { const s = el('tspan', {x, dy: i ? lh : 0}, t); s.textContent = l; }); return ls.length; };
+const cpl = (px, size) => Math.max(10, Math.floor(px / (size * 0.52)));
+
+// ---- dots, drawn as SVG so they stay sharp at any size
+const sv = (parent, tag, a) => el(tag, a, parent);
+// one row of dots: filled = found, pale with an outline = trace levels only, open ring = not found.
+// A share row's last dot is drawn open, with a filled disc whose area is the fraction of a point.
+function renderDots(g) {
+  if (!g.pts.length) return;
+  const grp = sv(g.node, 'g', {'class': 'dots', 'aria-hidden': 'true'});
+  for (const p of g.pts) {
+    if (p.kind === 'lit') {
+      if (p.f < 1) {
+        sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.88, fill: 'none', stroke: g.color, 'stroke-opacity': 0.55, 'stroke-width': 1});
+        sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.88 * Math.sqrt(p.f), fill: g.color, 'fill-opacity': 0.9});
+      } else sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.88, fill: g.color, 'fill-opacity': 0.88 * (p.a || 1)});
+    } else if (p.kind === 'trace') sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.88, fill: g.color, 'fill-opacity': 0.32, stroke: g.color, 'stroke-opacity': 0.85, 'stroke-width': 1});
+    else sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.5, fill: 'none', stroke: g.color, 'stroke-opacity': 0.8, 'stroke-width': 1});
+  }
+}
+// one multiple on the log scale: an open dot at 1x (the group compared with) and a filled dot at the multiple
+function renderMult(g) {
+  const grp = sv(g.node, 'g', {'class': 'dots', 'aria-hidden': 'true'});
+  sv(grp, 'line', {x1: g.x1, x2: g.xv, y1: g.cy, y2: g.cy, stroke: g.color, 'stroke-opacity': 0.5, 'stroke-width': 1});
+  sv(grp, 'circle', {cx: g.x1, cy: g.cy, r: 3.4, fill: 'none', stroke: g.color, 'stroke-width': 1.2});
+  if (g.hollow) sv(grp, 'circle', {cx: g.xv, cy: g.cy, r: 6.4, fill: g.color, 'fill-opacity': 0.16, stroke: g.color, 'stroke-width': 1.6});
+  else sv(grp, 'circle', {cx: g.xv, cy: g.cy, r: 6.8, fill: g.color, 'fill-opacity': 0.9});
+}
+// a bar is a count out of 100 products: dark for found, pale for trace levels only, the rest of the track for not found
+function renderBar(g) {
+  const b = g.bar, grp = sv(g.node, 'g', {'class': 'dots', 'aria-hidden': 'true'});
+  sv(grp, 'rect', {x: b.x, y: b.y, width: b.w, height: b.h, fill: g.color, 'fill-opacity': 0.1});
+  if (b.solid) sv(grp, 'rect', {x: b.x, y: b.y, width: b.w * b.solid / 100, height: b.h, fill: g.color, 'fill-opacity': 0.92});
+  if (b.trace) sv(grp, 'rect', {x: b.x + b.w * b.solid / 100, y: b.y, width: b.w * b.trace / 100, height: b.h, fill: g.color, 'fill-opacity': 0.34});
+}
+const render = g => g.type === 'mult' ? renderMult(g) : g.type === 'bar' ? renderBar(g) : renderDots(g);
+const active = () => hoverG || pinG;
+
+// ---- readout
+function info(g) {
+  if (g.kind === 'sub') {
+    const it = g.it;
+    return {b: it.item, m: FAMS[it.fam].name, w: `Found in ${it.total} of the 100 products.`,
+      s: it.item === 'Acrylamide' ? 'Measurable in 4, and at very low levels in 24 more. Confirmed in the report, the study page.' : it.item === 'Dibutyl phthalate' ? 'Seen in 26 products, never at a level the laboratory could quantify. ' + from(it.src) : it.total === 0 ? 'Not found in any product. ' + from(it.src) : from(it.src)};
+  }
+  if (g.kind === 'mult' || g.kind === 'assoc') {
+    const cp = g.cp;
+    return {b: cp.item + ', ' + (cp.assoc ? `+${cp.raw}% for each ingredient` : fmtN(cp.raw) + '×'), m: cp.what,
+      w: cp.assoc ? 'An association: about 40% more glyphosate for each added plant ingredient among the first ten listed.' : `About ${fmtN(cp.raw)} times as much ${cp.item === 'DEHP' ? 'DEHP' : cp.item.toLowerCase()}. This is a multiple and not an amount.`, s: from(cp.src)};
+  }
+  if (g.kind === 'share') return {b: fmtN(g.f.pct) + '%', m: g.f.name, w: `${g.f.what.charAt(0).toUpperCase()}${g.f.what.slice(1)}.` + (/standard/.test(g.f.what) ? " The standard is the Clean Label Project's own and relative to the other products." : ''), s: from(g.f.src)};
+  return {b: 'The sample', m: `${sampleAll.value} products from 62 brands, screened for more than 122 substances`, w: mixText + ' products.', s: from(sampleAll.sources)};
+}
+const CAVEAT = 'Found does not mean harmful. The report gives detection rates and multiples, not amounts, and says no regulatory limits apply.';
+const IDLE = {b: 'Hover, tap or focus any row', m: '', w: 'The readout gives the figure, what it compares and where it was confirmed. Click a row to hold it.', s: ''};
+function setReadout() {
+  if (!roNodes) return;
+  const g = active(), d = g ? info(g) : IDLE;
+  const n = mode === 'desk' ? 118 : 56;
+  roNodes[0].textContent = d.b + (d.m ? '  ·  ' + d.m : '');
+  const w = wrap(d.w, n); roNodes[1].textContent = w[0] || '';
+  roNodes[2].textContent = (w[1] ? w.slice(1).join(' ') + ' ' : '') + d.s;
+  if (mode !== 'desk') { const rest = wrap(roNodes[2].textContent, 64); roNodes[2].textContent = rest[0] || ''; roNodes[3].textContent = rest[1] || ''; }
+}
+function setActive() {
+  const f = active();
+  glyphs.forEach(h => h.node && h.node.classList.toggle('dim', !!f && h !== f));
+  setReadout();
+}
+
+// ---- building blocks
+function hit(g, box) {
+  const r = el('rect', {'class': 'hit', x: box.x, y: box.y, width: box.w, height: box.h, tabindex: 0, role: 'button', 'aria-label': info(g).b + '. ' + info(g).w});
+  r.addEventListener('mouseenter', () => { hoverG = g; setActive(); });
+  r.addEventListener('mouseleave', () => { hoverG = null; setActive(); });
+  r.addEventListener('focus', () => { hoverG = g; setActive(); });
+  r.addEventListener('blur', () => { hoverG = null; setActive(); });
+  r.addEventListener('click', ev => { ev.stopPropagation(); pinG = pinG === g ? null : g; setActive(); });
+  r.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); pinG = pinG === g ? null : g; setActive(); } });
+}
+function dotRow(x, y, w, o) {
+  const per = w / 100 >= 4.5 ? 100 : 50, pitch = w / per, lines = 100 / per, rr = pitch * 0.44;
+  const g = {type: 'row', kind: o.kind, color: o.color, seed: o.seed, p: pitch, rr, pts: [], it: o.it, f: o.f};
+  g.node = el('g', {'class': 'col'});
+  const t = el('text', {'class': 'nm0', x, y: y + 11}, g.node);
+  el('tspan', {}, t).textContent = o.name;
+  if (o.suffix) el('tspan', {'class': 'sfx', dx: 8}, t).textContent = o.suffix;
+  txt(g.node, 'val', x + w, y + 12, o.valText, {'text-anchor': 'end'});
+  if (o.sub) txt(g.node, 'nm3', x, y + 25, o.sub);
+  const y0 = y + (o.sub ? 31 : 19);
+  for (let k = 0; k < 100; k++) {
+    let kind = k < o.solid ? 'lit' : k < o.solid + o.trace ? 'trace' : 'off', f = 1, a = 1;
+    if (o.partial && k === o.solid) { kind = 'lit'; f = o.partial; }
+    if (o.segs) { let acc = 0; for (const s of o.segs) { if (k < acc + s.n) { a = s.a; kind = 'lit'; break; } acc += s.n; } }
+    g.pts.push({x: x + ((k % per) + 0.5) * pitch, y: y0 + (Math.floor(k / per) + 0.5) * pitch, kind, f, a});
+  }
+  g.x0 = x; g.y0 = y0; g.w = w; g.h = lines * pitch;
+  const rowH = (y0 - y) + lines * pitch + (o.gap == null ? 8 : o.gap);
+  glyphs.push(g); hit(g, {x: x - 6, y: y - 4, w: w + 12, h: rowH - 1});
+  return rowH;
+}
+function barRow(x, y, w, o) {
+  const g = {type: 'bar', kind: 'sub', color: o.color, it: o.it, bar: {x, y: y + 17, w, h: 8, solid: o.solid, trace: o.trace}};
+  g.node = el('g', {'class': 'col'});
+  const t = el('text', {'class': 'nm0', x, y: y + 11}, g.node);
+  el('tspan', {}, t).textContent = o.name;
+  if (o.suffix) el('tspan', {'class': 'sfx', dx: 8}, t).textContent = o.suffix;
+  txt(g.node, 'val', x + w, y + 12, o.valText, {'text-anchor': 'end'});
+  glyphs.push(g); hit(g, {x: x - 6, y: y - 4, w: w + 12, h: 33});
+  return 33;
+}
+function sectHead(x, y, w, no, title, desc, n) {
+  el('line', {'class': 'hair', x1: x, x2: x + w, y1: y, y2: y});
+  txt(svg, 'k', x, y + 20, `${no} · ${title}`);
+  if (!desc) return 30;
+  const lines = para(svg, 'nm', x, y + 38, desc, n || cpl(w, 13), 16);
+  return 38 + (lines - 1) * 15 + 16;
+}
+
+// ---- panels
+function panelFound(x, y, w) {
+  FAMS.forEach((f, k) => {
+    el('rect', {x, y: y + 3, width: 12, height: 3, fill: f.color});
+    txt(svg, 'k', x + 20, y + 9, f.name);
+    y += 17;
+    items.filter(i => i.fam === k).forEach((it, j) => {
+      y += barRow(x, y, w, {name: it.item, suffix: SFX[it.item], valText: String(it.total), solid: it.solid, trace: it.trace, color: f.color, it});
+    });
+    y += 7;
+  });
+  return y;
+}
+function panelRatios(x, y, w) {
+  const AX0 = x + 8, AX1 = x + w - 46, ax = v => AX0 + (AX1 - AX0) * Math.log(v) / Math.log(30), ticks = [1, 2, 5, 10, 20, 30];
+  const tickRow = yy => ticks.forEach(v => txt(svg, 'ax', ax(v), yy, v + '×', {'text-anchor': v === 1 ? 'start' : 'middle'}));
+  const vg = el('g', {});
+  const GROUPS = [
+    ['By protein', [['Fish and seafood vs other proteins'], ['Fish-based wet vs wet made with other proteins', 'Within wet foods only, a subset of the row above', true], ['Fish and seafood vs other products']]],
+    ['By format and packaging', [['Dry vs wet or air-dried'], ['Canned and pouched vs bagged']]],
+    ['Across all products', [['Highest-lead products vs the typical product']]]
+  ];
+  tickRow(y + 8); y += 16;
+  const rows = [];
+  GROUPS.forEach(([name, list]) => {
+    txt(svg, 'k', x, y + 12, name); y += 20;
+    list.forEach(([what, short, nested]) => {
+      const cp = MULT.find(c => c.what === what), ind = nested ? 14 : 0;
+      const g = {type: 'mult', kind: 'mult', color: FAMS[cp.fam].color, cp, x1: ax(1), xv: ax(cp.v), cy: y + 34, hollow: /Highest-lead/.test(cp.what)};
+      g.node = el('g', {'class': 'col'});
+      if (nested) el('path', {d: `M${x + 3},${y} V${y + 17} H${x + 11}`, fill: 'none', stroke: '#8b8e93', 'stroke-width': 1}, g.node);
+      txt(g.node, 'nm0', x + ind, y + 11, cp.item).setAttribute('font-weight', '500');
+      txt(g.node, 'nm3', x + ind, y + 25, short || cp.short);
+      txt(g.node, 'md', g.xv + 12, g.cy + 5, fmtN(cp.raw) + '×');
+      g.x0 = g.x1 - 10; g.y0 = g.cy - 12; g.w = g.xv - g.x1 + 24; g.h = 24;
+      glyphs.push(g); rows.push(g); hit(g, {x: x - 6, y: y - 2, w: w + 12, h: 42}); y += 42;
+    });
+    y += 3;
+  });
+  rows.forEach(g => ticks.forEach(v => el('line', {'class': v === 1 ? 'one' : 'vg', x1: ax(v), x2: ax(v), y1: g.cy - 8, y2: g.cy + 8}, vg)));
+  para(svg, 'nm3', x, y + 12, 'Open dot at 1×: the group compared with. Hollow ring: products compared, not two food groups. The scale is logarithmic.', cpl(w, 12.5), 15);
+  y += 44;
+  // glyphosate
+  const gg = {type: 'assoc', kind: 'assoc', color: FAMS[1].color, cp: cpG, pts: [], x0: 0, y0: 0, w: 1, h: 1};
+  gg.node = el('g', {'class': 'col'});
+  txt(gg.node, 'big', x, y + 26, '+' + cpG.raw + '%').setAttribute('fill', FAMS[1].color);
+  txt(gg.node, 'nm0', x + 104, y + 11, 'Glyphosate').setAttribute('font-weight', '500');
+  para(gg.node, 'nm3', x + 104, y + 26, 'Each added plant ingredient among the first ten listed was associated with about 40% more glyphosate. This is not a ratio between two groups.', cpl(w - 104, 12.5), 15);
+  glyphs.push(gg); hit(gg, {x: x - 6, y: y - 4, w: w + 12, h: 70});
+  y += 74;
+  return y;
+}
+function panelStandard(x, y, w) {
+  fans.forEach((f, i) => {
+    const whole = Math.floor(f.pct), part = +(f.pct - whole).toFixed(3);
+    y += dotRow(x, y, w, {kind: 'share', name: f.name, sub: f.what, valText: fmtN(f.pct) + '%', solid: whole, trace: 0, partial: part, color: f.color, f, seed: 91 + i * 17, gap: 12});
+  });
+  const n = para(svg, 'nm', x, y + 6, `Poultry products were ${ratio} times as likely to meet the standard, a gap of ${gapPts} percentage points.`, cpl(w, 13), 16);
+  y += 6 + n * 15 + 6;
+  const n2 = para(svg, 'nm3', x, y + 6, STD_NOTE, cpl(w, 12.5), 15);
+  y += 6 + n2 * 15 + 12;
+  const n3 = para(svg, 'nm', x, y + 6, TRADE, cpl(w, 13), 16);
+  y += 6 + n3 * 16 + 20;
+  txt(svg, 'k', x, y, 'The sample'); y += 12;
+  const g = {type: 'row', kind: 'sample', color: INK, seed: 5, pts: [], x0: 0, y0: 0, w: 1, h: 1};
+  const dr = dotRow(x, y, w, {kind: 'sample', name: '', valText: '', solid: 0, trace: 0, color: INK, seed: 5, segs: sample.map((s, i) => ({n: s.value, a: [1.1, 0.62, 0.34][i]})), gap: 6});
+  const sg = glyphs[glyphs.length - 1]; sg.node.querySelectorAll('text').forEach(t => t.remove());
+  y += dr - 6;
+  para(svg, 'nm3', x, y + 14, `${sampleAll.value} products: ${mixText}.`, cpl(w, 12.5), 15);
+  return y + 40;
+}
+function panelCare(x, y, w, cols) {
+  const cw = (w - (cols - 1) * 36) / cols;
+  let maxH = 0, yy = y;
+  CARE.forEach(([h, t], i) => {
+    const cx = x + (i % cols) * (cw + 36);
+    if (i % cols === 0 && i) yy += maxH + 16, maxH = 0;
+    txt(svg, 'nm0', cx, yy + 11, h).setAttribute('font-weight', '500');
+    const n = para(svg, 'nm', cx, yy + 28, t, cpl(cw, 13), 16);
+    maxH = Math.max(maxH, 28 + (n - 1) * 15 + 6);
+  });
+  return yy + maxH;
+}
+
+// ---- chrome
+function defsKey() {
+}
+function legend(x, y, withFam) {
+  const blue = FAMS[0].color;
+  let cx = x;
+  el('rect', {x: cx, y: y - 9, width: 18, height: 8, fill: blue, 'fill-opacity': 0.92});
+  let t = txt(svg, 'nm', cx + 24, y, 'found in a product'); cx += 24 + t.getComputedTextLength() + 20;
+  el('rect', {x: cx, y: y - 9, width: 18, height: 8, fill: blue, 'fill-opacity': 0.34});
+  t = txt(svg, 'nm', cx + 24, y, 'trace levels only'); cx += 24 + t.getComputedTextLength() + 20;
+  el('rect', {x: cx, y: y - 9, width: 18, height: 8, fill: blue, 'fill-opacity': 0.1});
+  txt(svg, 'nm', cx + 24, y, 'not found');
+  if (withFam) {
+    let fx = x;
+    FAMS.forEach((f, i) => { el('rect', {x: fx, y: y + 18, width: 12, height: 3, fill: f.color}); const tt = txt(svg, 'nm', fx + 18, y + 25, ['Heavy metals', 'Glyphosate and AMPA', 'Plastic chemicals', 'Acrylamide'][i]); fx += 18 + tt.getComputedTextLength() + 18; });
+  }
+}
+function button(x, y, label, fn) {
+  const g = el('g', {'class': 'btn', tabindex: 0, role: 'button', 'aria-label': label});
+  const r = el('rect', {x, y, height: 24, rx: 0}, g), t = txt(g, '', x + 12, y + 16, label);
+  const w = t.getComputedTextLength() + 24; r.setAttribute('width', w);
+  g.addEventListener('click', fn); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fn(); } });
+  return w;
+}
+function links(x, y) {
+  txt(svg, 'k', x, y, 'Sources'); let lx = x + 62;
+  LINKS.forEach(([l, u]) => { const a = el('a', {href: u, target: '_blank', rel: 'noopener'}); const t = txt(a, 'lnk', lx, y, l); lx += t.getComputedTextLength() + 16; });
+  return lx;
+}
+function readout(x, y, w, big) {
+  const g = el('g', {'aria-live': 'polite'});
+  roNodes = [txt(g, 'ro1', x, y + 14, ''), txt(g, 'ro2', x, y + 33, ''), txt(g, 'ro3', x, y + 50, '')];
+  if (!big) roNodes.push(txt(g, 'ro3', x, y + 64, ''));
+}
+function openOver() { over.hidden = false; over.querySelector('button').focus(); }
+function closeOver() { over.hidden = true; }
+
+function buildOver() {
+  const lbl = r => r.block === 'detection' ? r.item + (r.measure === 'products_trace' ? ' (trace)' : r.measure === 'products_measurable' ? ' (measurable)' : '') : r.block === 'comparison' ? r.item + ', ' + r.group : r.block === 'standard' ? r.group : r.item + (r.group === 'Format' ? ' (format)' : '');
+  const val = r => { const u = r.unit; return fmtN(r.value) + (u === 'x' ? '×' : u === 'percent' ? '%' : u === 'of 100 products' ? ' of 100' : u === 'percentage points' ? (r.value === 1 ? ' pt' : ' pts') : ' ' + u); };
+  const blocks = [['detection', 'How often found'], ['comparison', 'How much more'], ['standard', 'The standard'], ['sample', 'The sample']];
+  over.innerHTML = `<div class="oh"><h2>Every figure, with where it was confirmed</h2><div class="ob"><a class="dl" href="data/cat-food-contaminants.csv" download>Download CSV</a><button type="button" id="oc">Close</button></div></div>` +
+    `<div class="og" style="grid-template-columns:repeat(${mode === 'desk' ? 4 : 1},minmax(0,1fr))">` + blocks.map(([b, t]) => `<div><h3>${t}</h3><table>` + rows.filter(r => r.block === b).map(r => `<tr><td>${esc(lbl(r))}</td><td class="n">${esc(val(r))}</td><td class="s">${r.sources.split(';').join(' ')}</td></tr>`).join('') + '</table></div>').join('') + '</div>' +
+    `<p class="of">R: the report. W: the study page. P: the press release. C: CNN or Scripps coverage. N: Newsweek.</p>`;
+  over.querySelector('#oc').addEventListener('click', closeOver);
+  over.style.cssText = `left:0;top:0;width:${Wd}px;height:${Hd}px`;
+}
+
+// ---- build
+function fit() {
+  const vw = window.innerWidth, vh = window.innerHeight;
+  mode = vw < 760 || vw / vh < 1.05 ? 'mob' : 'desk';
+  const d = mode === 'desk' ? DESK : MOB;
+  Wd = d.w; Hd = d.h; SC = Math.min(vw / Wd, vh / Hd);
+  poster.style.width = Wd + 'px'; poster.style.height = Hd + 'px';
+  poster.style.transform = `scale(${SC})`;
+  poster.style.left = (vw - Wd * SC) / 2 + 'px'; poster.style.top = (vh - Hd * SC) / 2 + 'px';
+  RES = Math.min(3, (window.devicePixelRatio || 1) * SC);
+  svg.setAttribute('width', Wd); svg.setAttribute('height', Hd); svg.setAttribute('viewBox', `0 0 ${Wd} ${Hd}`);
+}
+function build() {
+  fit();
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  glyphs = []; roNodes = null;
+  const bg = el('rect', {x: 0, y: 0, width: Wd, height: Hd, fill: 'transparent'}); bg.addEventListener('click', () => { pinG = null; setActive(); });
+  defsKey();
+  if (mode === 'desk') {
+    const M = 40, cw = Wd - 2 * M;
+    txt(svg, 'k', M, 34, 'Data study · Clean Label Project, 2026 · 100 cat foods from 62 brands · Alex Corvin');
+    txt(svg, 't1', M, 80, 'Contaminants in Cat Food, 2026');
+    para(svg, 'dk', M, 104, DECK, 120, 17);
+    para(svg, 'cv', M, 142, CAVEAT, 150, 17);
+    legend(1000, 52, true);
+    para(svg, 'nm3', 1000, 94, 'Bars in part 01 count products out of 100. Dots in part 03 are percentage points.', 90, 15);
+    const AW = 600, BW = 440, CW = cw - AW - BW - 72, BX = M + AW + 36, CX = BX + BW + 36;
+    let hA = sectHead(M, 164, AW, '01', 'How often each substance was found', 'Each bar is a count out of 100 products: dark for found, pale for trace levels only. The report does not say which products, so bars are counts and not lists.', 88);
+    panelFound(M, 164 + hA, AW);
+    let hB = sectHead(BX, 164, BW, '02', 'How much more, by ingredient, format and packaging', 'Each row compares two groups of products, as the multiples the report states. The baselines differ between rows, so a longer row does not mean a worse food.', 62);
+    panelRatios(BX, 164 + hB, BW);
+    let hC = sectHead(CX, 164, CW, '03', "The Clean Label Project's own standard", 'Each row has 100 dots, one for each percentage point of its group. Group sizes are not published.', 46);
+    panelStandard(CX, 164 + hC, CW);
+    el('line', {'class': 'hair', x1: M, x2: M + cw, y1: 704, y2: 704});
+    txt(svg, 'k', M, 723, '04 · What the figures cannot show');
+    panelCare(M, 736, cw, 4);
+    el('line', {'class': 'hair', x1: M, x2: M + cw, y1: 818, y2: 818});
+    readout(M, 828, 1000, false);
+    const bw = button(1120, 832, 'Data table', () => { buildOver(); openOver(); });
+    links(1120, 884);
+  } else {
+    const M = 16;
+    txt(svg, 'k', M, 26, 'Data study · Clean Label Project, 2026');
+    txt(svg, 't1m', M, 56, 'Contaminants in Cat Food, 2026');
+    const labels = ['Found', 'Ratios', 'Standard', 'Care'], tw = (Wd - 2 * M) / 4;
+    labels.forEach((l, i) => {
+      const g = el('g', {'class': 'tab' + (i === tab ? ' on' : ''), tabindex: 0, role: 'tab', 'aria-selected': i === tab});
+      el('rect', {x: M + i * tw, y: 70, width: tw, height: 34, fill: 'transparent'}, g);
+      txt(g, '', M + i * tw + tw / 2, 92, l, {'text-anchor': 'middle'});
+      el('line', {x1: M + i * tw + 10, x2: M + (i + 1) * tw - 10, y1: 103, y2: 103}, g);
+      const go = () => { tab = i; pinG = hoverG = null; build(); };
+      g.addEventListener('click', go); g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+    el('line', {'class': 'hair', x1: M, x2: Wd - M, y1: 104, y2: 104});
+    const w = Wd - 2 * M, y0 = 116;
+    if (tab === 0) {
+      const n = para(svg, 'dk', M, y0 + 12, DECK, 48, 17), m = para(svg, 'cv', M, y0 + 12 + n * 17 + 8, CAVEAT, 44, 17);
+      legend(M, y0 + 12 + (n + m) * 17 + 24, false);
+      panelFound(M, y0 + (n + m) * 17 + 50, w);
+    } else if (tab === 1) {
+      const n = para(svg, 'nm', M, y0 + 12, 'Each row compares two groups of products, as the multiples the report states. The baselines differ between rows, so a longer row does not mean a worse food.', 56, 16);
+      panelRatios(M, y0 + n * 15 + 24, w);
+    } else if (tab === 2) {
+      const n = para(svg, 'nm', M, y0 + 12, 'Each row has 100 dots, one for each percentage point of its group. Group sizes are not published.', 62, 15);
+      panelStandard(M, y0 + n * 15 + 24, w);
+    } else {
+      txt(svg, 'k', M, y0 + 10, 'What the figures cannot show');
+      const yb = panelCare(M, y0 + 24, w, 1);
+      const lk = yb + 30; txt(svg, 'k', M, lk, 'Sources'); let ly = lk + 20;
+      LINKS.forEach(([l, u]) => { const a = el('a', {href: u, target: '_blank', rel: 'noopener'}); txt(a, 'lnk', M, ly, l); ly += 20; });
+      button(M, ly + 8, 'Data table', () => { buildOver(); openOver(); });
+    }
+    el('line', {'class': 'hair', x1: M, x2: Wd - M, y1: 790, y2: 790});
+    readout(M, 798, w, false);
+  }
+  glyphs.forEach(render);
+  setReadout();
+}
+
+window.addEventListener('keydown', e => { if (e.key === 'Escape') { if (!over.hidden) closeOver(); else { pinG = null; setActive(); } } });
+let rt = 0;
+window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 120); });
+build();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+})();
+</script>
+</body>
+</html>

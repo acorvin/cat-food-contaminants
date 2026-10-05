@@ -1,0 +1,32 @@
+block,item,group,measure,value,unit,sources,note
+detection,Lead,Heavy metals,products_detected,99,of 100 products,R;W;C;N,
+detection,Cadmium,Heavy metals,products_detected,96,of 100 products,R;W;C;N,
+detection,Arsenic,Heavy metals,products_detected,94,of 100 products,R;W;C;N,
+detection,Glyphosate,Glyphosate and its breakdown product,products_detected,37,of 100 products,R;W;C,Herbicide
+detection,AMPA,Glyphosate and its breakdown product,products_detected,12,of 100 products,R;W,Breakdown product of glyphosate
+detection,DEHP,Plastic chemicals,products_detected,48,of 100 products,R;W;C,Plasticizer; a Toxic Free Future scientist quoted by CNN says it was detected in about half of the products
+detection,Dibutyl phthalate,Plastic chemicals,products_trace,26,of 100 products,R;W,Detected in 26 products but never at a quantifiable level
+detection,Dihexyl phthalate,Plastic chemicals,products_detected,0,of 100 products,R,Not detected in any product
+detection,BPA,Plastic chemicals,products_detected,2,of 100 products,R,Bisphenol
+detection,BPS,Plastic chemicals,products_detected,1,of 100 products,R,Bisphenol
+detection,Acrylamide,Acrylamide,products_measurable,4,of 100 products,R,Measurable levels
+detection,Acrylamide,Acrylamide,products_trace,24,of 100 products,R,Very low levels in an additional 24 products
+comparison,Mercury,Fish and seafood vs other proteins,multiple,18,x,R;W;P;C,Stated as about 18x
+comparison,Mercury,Fish-based wet vs wet made with other proteins,multiple,28,x,W;P;C,Stated on the study page and in the press release; the multiple appears as a chart label in the report and is not in its running text
+comparison,Cadmium,Fish and seafood vs other products,multiple,2.5,x,R;W;P;C,Stated as about 2.5x
+comparison,Lead,Dry vs wet or air-dried,multiple,3,x,R;W;P;C;N,Stated as roughly 3x
+comparison,Lead,Highest-lead products vs the typical product,multiple,3.5,x,R;W,Stated as about 3.5x
+comparison,DEHP,Canned and pouched vs bagged,multiple,5,x,R;W;P,Stated as about 5x
+comparison,Glyphosate,Each added plant ingredient among the first ten listed,percent_higher,40,percent,R;W;P;C,An association; stated as about 40% higher per ingredient
+standard,Met the standard,Poultry products,share_meeting_standard,84.8,percent,R;W;P;C,Standard is set against the other products in the study
+standard,Met the standard,Fish and seafood products,share_meeting_standard,25.7,percent,R;W;P;C,Standard is set against the other products in the study
+standard,Met the standard,Gap between poultry and fish and seafood,percentage_points,59.1,percentage points,R,
+standard,Met the standard,Poultry vs fish and seafood likelihood,multiple,3.3,x,R;W,
+standard,Met the standard,Largest difference between dry and wet formats,percentage_points,1,percentage points,R,Formats were within one percentage point of each other
+standard,Mercury,Fish and seafood products ranked among the highest for mercury,share_of_group,48.6,percent,R;W,
+sample,Products tested,All,count,100,products,R;W;C,Purchased at retail; stated by the Clean Label Project to CNN. CNN calls them top-selling cat foods
+sample,Brands,All,count,62,brands,R;W;C,
+sample,Substances screened,All,count,122,substances,R;W;C,Stated as more than 122
+sample,Dry,Format,count,31,products,R;W,Kibble
+sample,Wet,Format,count,40,products,R;W,Canned or pouch
+sample,Air-dried or freeze-dried,Format,count,29,products,R;W,

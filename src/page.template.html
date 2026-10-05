@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contaminants in Cat Food, 2026</title>
+<meta name="description" content="What an independent laboratory found when the Clean Label Project tested 100 cat foods from 62 brands, set out from the figures in its published report.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#ffffff; --panel:#fafafa; --ink:#121212; --ink2:#6b6b6b; --ink3:#999999; --rule:#e3e3e3;
+  --metal:#5b9ddf; --herb:#5acaaf; --plastic:#d073b3; --acryl:#eba051;
+  --seg1:#121212; --seg1t:#ffffff; --seg2:#6b6b6b; --seg2t:#ffffff; --seg3:#b8b8b8; --seg3t:#121212;
+  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"Geist Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ground:#121212; --panel:#171717; --ink:#f2f2f2; --ink2:#a3a3a3; --ink3:#767676; --rule:#2c2c2c;
+    --metal:#4c88d3; --herb:#3da989; --plastic:#bc61a0; --acryl:#cb8230;
+    --seg1:#f2f2f2; --seg1t:#121212; --seg2:#a3a3a3; --seg2t:#121212; --seg3:#5a5a5a; --seg3t:#f2f2f2;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+
+/* header */
+header.top{padding:72px 0 40px}
+header.top .mono{margin:0 0 28px}
+h1{font-weight:500;font-size:clamp(38px,6.4vw,68px);line-height:1.04;letter-spacing:-.025em;margin:0 0 24px;max-width:15ch}
+.sub{font-size:clamp(18px,2.2vw,22px);line-height:1.45;color:var(--ink2);max-width:42em;margin:0 0 28px}
+.byline{display:flex;gap:20px;flex-wrap:wrap}
+
+/* hero */
+.hero{border-top:1px solid var(--rule);padding:56px 0 8px}
+.hero-fig{font-weight:500;font-size:clamp(72px,15vw,148px);line-height:.95;letter-spacing:-.04em;margin:0}
+.hero-fig span{color:var(--ink3)}
+.hero-cap{font-size:clamp(18px,2.4vw,24px);line-height:1.4;margin:16px 0 0;max-width:30em}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);margin:48px 0 0;border-top:1px solid var(--rule)}
+.kpi{padding:20px 20px 20px 0}
+.kpi + .kpi{padding-left:20px;border-left:1px solid var(--rule)}
+.kpi b{display:block;font-weight:500;font-size:clamp(28px,4.4vw,44px);line-height:1.1;letter-spacing:-.02em}
+.kpi span{display:block;font-size:14px;color:var(--ink2);margin-top:4px}
+
+/* prose */
+.intro{padding:40px 0 24px;border-top:1px solid var(--rule);margin-top:24px}
+.intro p, .prose p{max-width:40em;margin:0 0 1em}
+section{border-top:1px solid var(--rule);padding:56px 0 24px}
+section .mono{margin:0 0 14px}
+h2{font-weight:500;font-size:clamp(26px,3.6vw,36px);line-height:1.15;letter-spacing:-.02em;margin:0 0 16px;max-width:22em}
+.lede{max-width:40em;margin:0 0 32px;color:var(--ink)}
+.note{font-size:14px;line-height:1.55;color:var(--ink2);max-width:46em;margin:20px 0 0}
+
+/* chart chrome */
+.chart{position:relative}
+.chart-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 0 20px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--ink2)}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:7px;vertical-align:-1px}
+.tbtn{font:inherit;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:transparent;color:var(--ink);border:1px solid var(--rule);padding:7px 12px;cursor:pointer;border-radius:0}
+.tbtn:hover{border-color:var(--ink2)}
+.tbtn[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.tbtn:focus-visible,.row:focus-visible,.hit:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* detection ticks */
+.group{display:flex;align-items:center;gap:10px;margin:28px 0 6px}
+.group:first-of-type{margin-top:8px}
+.group i{width:10px;height:10px;display:block;background:var(--c);flex:none}
+.group .mono{margin:0}
+.row{display:grid;grid-template-columns:200px 1fr 96px;align-items:center;gap:16px;padding:9px 0;border-bottom:1px solid var(--rule)}
+.row .nm{font-size:15px;line-height:1.25}
+.row .nm small{display:block;font-size:12.5px;color:var(--ink2);margin-top:2px}
+.row .val{font-family:var(--mono);font-size:15px;text-align:right;white-space:nowrap}
+.row .val small{color:var(--ink3);font-size:12px}
+.row:hover{background:var(--panel)}
+svg.track{display:block;width:100%;height:20px}
+.t-on{fill:var(--c)}
+.t-trace{fill:var(--c);fill-opacity:.38}
+.t-off{fill:var(--rule)}
+.sw-on{background:var(--ink2)} .sw-trace{background:var(--ink2);opacity:.38} .sw-off{background:var(--rule)}
+
+/* ratio chart */
+.rrow{display:grid;grid-template-columns:260px 1fr;gap:16px;align-items:center;border-bottom:1px solid var(--rule)}
+.rrow .rl{padding:10px 0;font-size:15px;line-height:1.3}
+.rrow .rl small{display:block;font-size:13px;color:var(--ink2);margin-top:2px}
+.rp{position:relative;height:52px}
+.rp .g{position:absolute;top:0;bottom:0;width:1px;background:var(--rule)}
+.rp .g.base{background:var(--ink2)}
+.rp .stem{position:absolute;left:0;top:50%;height:2px;margin-top:-1px;background:var(--c)}
+.rp .dot{position:absolute;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px var(--ground)}
+.rp .lab{position:absolute;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:14px;white-space:nowrap;background:var(--ground);padding:1px 6px}
+.rp .hit{position:absolute;inset:0;cursor:default}
+.rrow:hover .rp .dot{box-shadow:0 0 0 2px var(--ground),0 0 0 4px var(--c)}
+.axis{display:grid;grid-template-columns:260px 1fr;gap:16px}
+.axis .rp{height:30px}
+.axis .tk{position:absolute;top:8px;transform:translateX(-50%);font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.axis .tk.first{transform:none}
+.axis .tk.last{transform:translateX(-100%)}
+
+/* standard bars */
+.brow{display:grid;grid-template-columns:200px 1fr;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule)}
+.bt{position:relative;height:32px}
+.bt .g{position:absolute;top:0;bottom:0;width:1px;background:var(--rule)}
+.bt .bar{position:absolute;left:0;top:6px;height:20px;background:var(--ink);border-radius:0 4px 4px 0}
+.bt .lab{position:absolute;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:15px;margin-left:10px;white-space:nowrap}
+.bt .hit{position:absolute;inset:0}
+.baxis{display:grid;grid-template-columns:200px 1fr;gap:16px}
+.baxis .bt{height:26px}
+.baxis .tk{position:absolute;top:4px;transform:translateX(-50%);font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.baxis .tk:first-child{transform:none}
+.baxis .tk:last-child{transform:translateX(-100%)}
+
+/* stacked bar */
+.stack{display:flex;gap:2px;height:48px;margin:8px 0 14px}
+.seg{position:relative;display:flex;align-items:center;padding:0 14px;font-family:var(--mono);font-size:15px;min-width:0}
+.seg.s1{background:var(--seg1);color:var(--seg1t)} .seg.s2{background:var(--seg2);color:var(--seg2t)} .seg.s3{background:var(--seg3);color:var(--seg3t)}
+.seg:first-child{border-radius:0} .seg:last-child{border-radius:0 4px 4px 0}
+.seg:hover{filter:brightness(1.08)}
+.slegend{display:flex;gap:24px;flex-wrap:wrap;font-size:14px}
+.slegend i{display:inline-block;width:10px;height:10px;margin-right:8px;vertical-align:-1px}
+
+dl.facts{margin:36px 0 0;border-top:1px solid var(--rule)}
+dl.facts div{display:grid;grid-template-columns:220px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:15px}
+dl.facts dt{color:var(--ink2)} dl.facts dd{margin:0}
+
+/* tables */
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 14px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);font-weight:400;white-space:nowrap}
+td.n{font-family:var(--mono);white-space:nowrap}
+.tabnum{font-variant-numeric:tabular-nums}
+[hidden]{display:none!important}
+
+.kpis.two{grid-template-columns:repeat(3,1fr);margin-top:28px}
+.sources{padding:56px 0 96px;border-top:1px solid var(--rule)}
+.sources ul{margin:0;padding:0;list-style:none;max-width:46em}
+.sources li{padding:8px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.sources li span{color:var(--ink2);font-size:13px}
+
+/* tooltip */
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ground);color:var(--ink);border:1px solid var(--ink2);padding:10px 12px;font-size:13px;line-height:1.4;max-width:280px;opacity:0;transition:opacity .08s}
+.tip.on{opacity:1}
+.tip b{display:block;font-family:var(--mono);font-size:15px;font-weight:500}
+.tip span{color:var(--ink2)}
+
+@media (max-width:720px){
+  .wrap{padding:0 16px}
+  header.top{padding:48px 0 28px}
+  .row{grid-template-columns:1fr auto;gap:6px 12px}
+  .row .tr{grid-column:1 / -1;order:3}
+  .rrow,.axis{grid-template-columns:1fr;gap:0}
+  .axis > div:first-child{display:none}
+  .rrow .rl{padding-bottom:0}
+  .brow,.baxis{grid-template-columns:1fr;gap:4px}
+  .baxis > div:first-child{display:none}
+  dl.facts div{grid-template-columns:1fr;gap:2px}
+  .kpis,.kpis.two{grid-template-columns:1fr}
+  .kpi + .kpi{padding-left:0;border-left:0;border-top:1px solid var(--rule)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <p class="mono">Data study &middot; Cat food &middot; Clean Label Project, 2026</p>
+  <h1>Contaminants in cat food, 2026</h1>
+  <p class="sub">What an independent laboratory found when the Clean Label Project tested 100 cat foods from 62 brands, set out from the figures in its published report.</p>
+  <div class="byline mono"><span>Alex Corvin</span><span>Source: Clean Label Project, Cat Food Category Report</span></div>
+</header>
+
+<div class="hero">
+  <p class="hero-fig">99<span> of 100</span></p>
+  <p class="hero-cap">cat foods in the study contained detectable lead, and cadmium and arsenic were found in nearly as many.</p>
+  <div class="kpis">
+    <div class="kpi"><b>100</b><span>top-selling products, bought at retail</span></div>
+    <div class="kpi"><b>62</b><span>brands</span></div>
+    <div class="kpi"><b>122+</b><span>substances screened for</span></div>
+  </div>
+</div>
+
+<div class="intro prose">
+  <p>In early October 2026 news outlets reported on a Clean Label Project study of 100 top-selling cat foods, bought at retail by the Colorado-based nonprofit. News coverage centered on the detection rates for heavy metals, pesticides and plastic chemicals. This page sets out the figures the report itself publishes, so that each one can be read next to the others and traced to its source.</p>
+  <p>I did not run any of the tests. The Clean Label Project has not released results for individual products, so everything here comes from the summary figures in its report and on its study page, and every figure is listed with its source in the table at the end.</p>
+</div>
+
+<section id="detection">
+  <p class="mono">01 &middot; Detection</p>
+  <h2>How often each contaminant was found</h2>
+  <p class="lede">Each tick below is one of the 100 products. Lead, cadmium and arsenic turned up in nearly all of them, the weedkiller glyphosate in a little over a third, and the plastic chemical DEHP in just under half. The ticks show how many products had each substance and not which ones, because the report does not identify them.</p>
+  <div class="chart" id="c-detect">
+    <div class="chart-head">
+      <div class="legend" aria-label="Legend">
+        <span><i class="sw-on"></i>Detected</span>
+        <span><i class="sw-trace"></i>Trace only (seen, but too low to quantify)</span>
+        <span><i class="sw-off"></i>Not detected</span>
+      </div>
+      <button class="tbtn" type="button" aria-pressed="false">Table view</button>
+    </div>
+    <div class="body"></div>
+    <div class="tablewrap" hidden></div>
+  </div>
+  <p class="note">Mercury is left out of this chart because the report gives it as comparisons between protein sources and not as a detection rate. Acrylamide was measurable in 4 products and present at very low levels in 24 more. Dibutyl phthalate was seen in 26 products but never at a level the laboratory could quantify, and dihexyl phthalate was not found in any product.</p>
+</section>
+
+<section id="comparisons">
+  <p class="mono">02 &middot; Comparisons</p>
+  <h2>How much more, depending on what the food is made of</h2>
+  <p class="lede">The report's main comparison is between ingredients and formats. Fish and seafood foods carried about 18 times the mercury of other foods, and among wet foods alone the gap was about 28 times. Dry food carried about three times the lead of wet or air-dried food.</p>
+  <div class="chart" id="c-ratio">
+    <div class="chart-head">
+      <div class="legend"><span><i style="background:var(--metal)"></i>Heavy metal</span><span><i style="background:var(--plastic)"></i>Plastic chemical</span><span><i style="background:var(--herb)"></i>Glyphosate</span></div>
+      <button class="tbtn" type="button" aria-pressed="false">Table view</button>
+    </div>
+    <div class="body"></div>
+    <div class="tablewrap" hidden></div>
+  </div>
+  <p class="note">Each dot is the multiple the report states, on a log scale where 1&times; means no difference. The report converts results to micrograms per 1,000 calories before comparing foods, and each row names its own baseline, so the rows cannot be added together or ranked as if they measured the same thing. The glyphosate row is an association the report found, rising by about 40% with each additional plant ingredient among the first ten listed, which is plotted here as 1.4&times;.</p>
+</section>
+
+<section id="standard">
+  <p class="mono">03 &middot; The standard</p>
+  <h2>Which products met the Clean Label Project's standard</h2>
+  <p class="lede">The report scores each product against the other cat foods in the study, and it says no regulatory limits apply to compare against. By that measure 84.8% of poultry products met the standard and 25.7% of fish and seafood products did. Dry and wet formats were within one percentage point of each other.</p>
+  <div class="chart" id="c-standard">
+    <div class="chart-head">
+      <div class="legend"><span>Share of products in each group that met the standard</span></div>
+      <button class="tbtn" type="button" aria-pressed="false">Table view</button>
+    </div>
+    <div class="body"></div>
+    <div class="tablewrap" hidden></div>
+  </div>
+  <div class="kpis two" id="k-standard"></div>
+  <p class="note">Meeting the standard is a ranking within these 100 products, set by the Clean Label Project, and not a safety threshold. I could not find the number of products in the poultry and fish groups in the report, so the percentages are not converted to counts here.</p>
+</section>
+
+<section id="method">
+  <p class="mono">04 &middot; The sample</p>
+  <h2>What was tested, and how</h2>
+  <p class="lede">The 100 products were split across three formats. Wet food was the largest group.</p>
+  <div class="chart" id="c-sample">
+    <div class="chart-head">
+      <div class="legend"><span>Number of products by format</span></div>
+      <button class="tbtn" type="button" aria-pressed="false">Table view</button>
+    </div>
+    <div class="body"></div>
+    <div class="tablewrap" hidden></div>
+  </div>
+  <dl class="facts">
+    <div><dt>Selection</dt><dd>The Clean Label Project's executive director told CNN that every product was purchased at retail, that no brand had any role in selecting products, conducting testing or analyzing the results, and that no brand saw the results before publication.</dd></div>
+    <div><dt>Laboratory</dt><dd>An independent, ISO 17025-accredited analytical chemistry laboratory.</dd></div>
+    <div><dt>Heavy metals</dt><dd>Arsenic, cadmium, lead and mercury, measured by ICP-MS.</dd></div>
+    <div><dt>Other contaminants</dt><dd>Pesticides, bisphenols and phthalates, measured by LC-MS/MS.</dd></div>
+    <div><dt>Reported as</dt><dd>Micrograms per 1,000 calories, as quantified, trace (detected but below the quantification limit) or not detected.</dd></div>
+    <div><dt>Batches</dt><dd>Each product was tested from a single batch, so the study cannot show how much a product varies from one batch to the next.</dd></div>
+    <div><dt>Brand claims</dt><dd>The report makes statements about a brand only when at least three of its products were tested.</dd></div>
+  </dl>
+</section>
+
+<section id="limits">
+  <p class="mono">05 &middot; Reading it carefully</p>
+  <h2>What these figures do not say</h2>
+  <div class="prose">
+    <p>Detection means the laboratory measured the substance in the product. It does not mean the amount was harmful to a cat, and the report does not compare its results with regulatory limits because it says none apply, so the figures cannot show whether any product is unsafe.</p>
+    <p>The standard is the Clean Label Project's own and is set relative to the products in this study. Newsweek reported that Elise Fennig, chief executive of the Pet Food Institute, the industry trade group, objected to the use of a proprietary standard in place of recognized scientific and regulatory benchmarks, and questioned whether the detected amounts could harm cats. Newsweek also reported that the Clean Label Project named only three brands that meet its certification.</p>
+    <p>The sample is 100 products, each tested from one batch. It is large enough to show clear differences between fish and poultry formulas and between dry and wet formats, and too small to say much about any single brand.</p>
+  </div>
+</section>
+
+<section id="data">
+  <p class="mono">06 &middot; The data</p>
+  <h2>Every figure and where it came from</h2>
+  <p class="lede">The table lists each figure used on this page with the places it was confirmed. Figures that appear only in the report are marked that way, and the 28&times; wet-food multiple is on the study page and in the press release but not in the report's running text. The same table is available as a <a href="data/cat-food-contaminants.csv" download>CSV file</a>.</p>
+  <div class="tablewrap"><table id="t-all"></table></div>
+  <p class="note"><b>Source codes.</b> R: the Clean Label Project report (PDF). W: the Clean Label Project study page. P: the Clean Label Project press release. C: CNN or Scripps News coverage. N: Newsweek.</p>
+</section>
+
+<div class="sources">
+  <p class="mono">Sources</p>
+  <ul>
+    <li><a href="https://cleanlabelproject.org/wp-content/uploads/clean-label-project-cat-food-study-2026.pdf" target="_blank" rel="noopener">Clean Label Project, Cat Food Category Report (PDF)</a></li>
+    <li><a href="https://cleanlabelproject.org/cat-food-study/" target="_blank" rel="noopener">Clean Label Project, Cat Food Study</a></li>
+    <li><a href="https://www.cnn.com/2026/10/02/health/cat-food-toxins-wellness" target="_blank" rel="noopener">CNN, Cat food investigation finds heavy metals, pesticides and plastic chemicals</a></li>
+    <li><a href="https://www.scrippsnews.com/science-and-tech/cat-food-investigation-finds-heavy-metals-pesticides-and-plastic-chemicals" target="_blank" rel="noopener">Scripps News, Cat food investigation finds heavy metals, pesticides and plastic chemicals</a></li>
+    <li><a href="https://www.newsweek.com/heavy-metals-in-cat-food-safer-brands-as-study-examines-toxic-materials-12519532" target="_blank" rel="noopener">Newsweek, Heavy metals in cat food: safer brands as study examines toxic materials</a></li>
+  </ul>
+</div>
+
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+(function(){
+const NS='http://www.w3.org/2000/svg';
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n}
+function sv(tag,attrs){const n=document.createElementNS(NS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);return n}
+const fmt=(v)=>Number.isInteger(v)?String(v):String(v);
+
+/* tooltip: values lead, labels follow; textContent only */
+const tip=document.getElementById('tip');
+function setTip(lines){tip.textContent='';lines.forEach(([v,l])=>{if(v){tip.appendChild(el('b',null,v))}if(l){tip.appendChild(el('span',null,l));tip.appendChild(el('br'))}})}
+function placeTip(x,y){const w=tip.offsetWidth,h=tip.offsetHeight;let left=x+14,top=y+14;if(left+w>innerWidth-8)left=x-w-14;if(top+h>innerHeight-8)top=y-h-14;tip.style.left=Math.max(8,left)+'px';tip.style.top=Math.max(8,top)+'px'}
+function bindTip(node,lines){
+  node.addEventListener('pointerenter',e=>{setTip(lines);tip.classList.add('on');placeTip(e.clientX,e.clientY)});
+  node.addEventListener('pointermove',e=>placeTip(e.clientX,e.clientY));
+  node.addEventListener('pointerleave',()=>tip.classList.remove('on'));
+  node.addEventListener('focus',()=>{setTip(lines);tip.classList.add('on');const r=node.getBoundingClientRect();placeTip(r.left+Math.min(r.width/2,200),r.top+r.height/2)});
+  node.addEventListener('blur',()=>tip.classList.remove('on'));
+}
+
+/* table view toggle: same data, no hover required */
+function tableView(root,head,rows){
+  const btn=root.querySelector('.tbtn'),body=root.querySelector('.body'),tw=root.querySelector('.tablewrap');
+  const t=el('table');const thead=el('thead'),trh=el('tr');head.forEach(h=>trh.appendChild(el('th',null,h)));thead.appendChild(trh);t.appendChild(thead);
+  const tb=el('tbody');rows.forEach(r=>{const tr=el('tr');r.forEach((c,i)=>tr.appendChild(el('td',i>0?'n':null,c)));tb.appendChild(tr)});t.appendChild(tb);tw.appendChild(t);
+  btn.addEventListener('click',()=>{const on=btn.getAttribute('aria-pressed')!=='true';btn.setAttribute('aria-pressed',String(on));body.hidden=on;tw.hidden=!on;btn.textContent=on?'Chart view':'Table view';post()});
+}
+
+const rows=DATA;
+const by=(b)=>rows.filter(r=>r.block===b);
+
+/* ---- 01 detection ticks ---- */
+(function(){
+  const root=document.getElementById('c-detect'),body=root.querySelector('.body');
+  const colors={'Heavy metals':'var(--metal)','Glyphosate and its breakdown product':'var(--herb)','Plastic chemicals':'var(--plastic)','Acrylamide':'var(--acryl)'};
+  const subs={'AMPA':'Breakdown product of glyphosate','DEHP':'Plasticizer','BPA':'Bisphenol','BPS':'Bisphenol'};
+  const items=[];
+  by('detection').forEach(r=>{
+    let it=items.find(i=>i.item===r.item);
+    if(!it){it={item:r.item,group:r.group,det:0,meas:0,trace:0};items.push(it)}
+    if(r.measure==='products_detected')it.det+=r.value;
+    if(r.measure==='products_measurable')it.meas+=r.value;
+    if(r.measure==='products_trace')it.trace+=r.value;
+  });
+  const tableRows=[];let last=null;
+  items.forEach(it=>{
+    if(it.group!==last){const g=el('div','group');g.style.setProperty('--c',colors[it.group]);g.appendChild(el('i'));g.appendChild(el('span','mono',it.group));body.appendChild(g);last=it.group}
+    const solid=it.det+it.meas,total=solid+it.trace;
+    const row=el('div','row');row.style.setProperty('--c',colors[it.group]);row.tabIndex=0;
+    const nm=el('div','nm',it.item);
+    let sub=subs[it.item]||'';
+    if(it.item==='Dibutyl phthalate')sub='Trace only, never quantifiable';
+    if(it.item==='Dihexyl phthalate')sub='Not detected in any product';
+    if(it.item==='Acrylamide')sub=it.meas+' measurable, '+it.trace+' trace';
+    if(sub)nm.appendChild(el('small',null,sub));
+    const tr=el('div','tr');
+    const svg=sv('svg',{class:'track',viewBox:'0 0 100 10',preserveAspectRatio:'none','aria-hidden':'true'});
+    for(let i=0;i<100;i++){const c=i<solid?'t-on':(i<total?'t-trace':'t-off');svg.appendChild(sv('rect',{x:i,y:0,width:.72,height:10,class:c}))}
+    tr.appendChild(svg);
+    const val=el('div','val',String(total));val.appendChild(el('small',null,' / 100'));
+    row.append(nm,tr,val);body.appendChild(row);
+    const label=it.item+': '+total+' of 100 products'+(it.trace?' ('+solid+' measurable, '+it.trace+' trace only)':'');
+    row.setAttribute('aria-label',label);
+    const lines=[[total+' of 100',it.item]];
+    if(it.trace&&solid)lines.push([null,solid+' measurable, '+it.trace+' trace only']);
+    else if(it.trace)lines.push([null,'Trace only; none quantifiable']);
+    lines.push([null,(100-total)+' not detected']);
+    bindTip(row,lines);
+    tableRows.push([it.item,it.group,String(solid),String(it.trace),String(total),String(100-total)]);
+  });
+  tableView(root,['Substance','Group','Detected','Trace only','Total seen','Not detected'],tableRows);
+})();
+
+/* ---- 02 ratios on a log axis ---- */
+(function(){
+  const root=document.getElementById('c-ratio'),body=root.querySelector('.body');
+  const colors={Mercury:'var(--metal)',Cadmium:'var(--metal)',Lead:'var(--metal)',DEHP:'var(--plastic)',Glyphosate:'var(--herb)'};
+  const MAX=32,pct=v=>Math.log(v)/Math.log(MAX)*100;
+  const list=by('comparison').map(r=>({item:r.item,group:r.group,value:r.measure==='percent_higher'?1+r.value/100:r.value,raw:r.value,measure:r.measure,note:r.note}))
+    .sort((a,b)=>b.value-a.value);
+  const ticks=[1,2,5,10,20,30];
+  const tableRows=[];
+  list.forEach(r=>{
+    const row=el('div','rrow');row.style.setProperty('--c',colors[r.item]);
+    const rl=el('div','rl',r.item);rl.appendChild(el('small',null,r.group));
+    const rp=el('div','rp');
+    ticks.forEach(t=>{const g=el('span','g'+(t===1?' base':''));g.style.left=pct(t)+'%';rp.appendChild(g)});
+    const stem=el('span','stem');stem.style.width=pct(r.value)+'%';rp.appendChild(stem);
+    const dot=el('span','dot');dot.style.left=pct(r.value)+'%';rp.appendChild(dot);
+    const text=r.measure==='percent_higher'?'+'+r.raw+'% each':(Number.isInteger(r.value)?r.value:r.value)+'×';
+    const lab=el('span','lab',text);
+    if(pct(r.value)>82){lab.style.right=(100-pct(r.value))+'%';lab.style.marginRight='10px'}else{lab.style.left=pct(r.value)+'%';lab.style.marginLeft='14px'}
+    rp.appendChild(lab);
+    const hit=el('div','hit');hit.tabIndex=0;
+    const desc=r.measure==='percent_higher'?'about '+r.raw+'% higher glyphosate with each added plant ingredient':'about '+r.value+' times as much';
+    hit.setAttribute('aria-label',r.item+', '+r.group+': '+desc);
+    bindTip(hit,[[text,r.item+': '+r.group],[null,r.measure==='percent_higher'?'An association, plotted as 1.4×':'As stated in the report']]);
+    rp.appendChild(hit);
+    row.append(rl,rp);body.appendChild(row);
+    tableRows.push([r.item,r.group,r.measure==='percent_higher'?'+'+r.raw+'% per ingredient':r.value+'×']);
+  });
+  const ax=el('div','axis');ax.appendChild(el('div'));
+  const ap=el('div','rp');
+  ticks.forEach(t=>{const k=el('span','tk'+(t===ticks[0]?' first':(t===ticks[ticks.length-1]?' last':'')),t+'×');k.style.left=pct(t)+'%';ap.appendChild(k)});
+  ax.appendChild(ap);body.appendChild(ax);
+  tableView(root,['Substance','Comparison','Multiple stated'],tableRows);
+})();
+
+/* ---- 03 standard ---- */
+(function(){
+  const root=document.getElementById('c-standard'),body=root.querySelector('.body');
+  const s=by('standard');
+  const pol=s.find(r=>r.group==='Poultry products'),fish=s.find(r=>r.group==='Fish and seafood products');
+  [[pol,'Poultry products'],[fish,'Fish and seafood products']].forEach(([r,name])=>{
+    const row=el('div','brow');row.appendChild(el('div',null,name));
+    const bt=el('div','bt');[0,25,50,75,100].forEach(t=>{const g=el('span','g');g.style.left=t+'%';bt.appendChild(g)});
+    const bar=el('span','bar');bar.style.width=r.value+'%';bt.appendChild(bar);
+    const lab=el('span','lab',r.value+'%');
+    if(r.value>75){lab.style.right=(100-r.value)+'%';lab.style.marginRight='10px';lab.style.marginLeft='0';lab.style.color='var(--ground)'}else{lab.style.left=r.value+'%'}
+    bt.appendChild(lab);
+    const hit=el('div','hit');hit.tabIndex=0;hit.setAttribute('aria-label',name+': '+r.value+'% met the standard');
+    bindTip(hit,[[r.value+'%',name+' that met the standard'],[null,'Measured against the other products in the study']]);
+    bt.appendChild(hit);row.appendChild(bt);body.appendChild(row);
+  });
+  const ax=el('div','baxis');ax.appendChild(el('div'));const ab=el('div','bt');
+  [0,50,100].forEach(t=>{const k=el('span','tk',t+'%');k.style.left=t+'%';ab.appendChild(k)});ax.appendChild(ab);body.appendChild(ax);
+  const gap=s.find(r=>r.measure==='percentage_points'&&r.value>5),ratio=s.find(r=>r.measure==='multiple'),mer=s.find(r=>r.item==='Mercury');
+  const k=document.getElementById('k-standard');
+  [[gap.value,'percentage points between poultry and fish and seafood'],[ratio.value+'×','as likely for a poultry product to meet the standard'],[mer.value+'%','of fish and seafood products ranked among the highest for mercury']].forEach(([v,l])=>{const d=el('div','kpi');d.appendChild(el('b',null,String(v)));d.appendChild(el('span',null,l));k.appendChild(d)});
+  tableView(root,['Group','Share that met the standard'],[[ 'Poultry products',pol.value+'%'],['Fish and seafood products',fish.value+'%'],['Gap',gap.value+' percentage points'],['Likelihood, poultry vs fish and seafood',ratio.value+'×']]);
+})();
+
+/* ---- 04 sample ---- */
+(function(){
+  const root=document.getElementById('c-sample'),body=root.querySelector('.body');
+  const fm=by('sample').filter(r=>r.group==='Format');
+  const total=fm.reduce((a,r)=>a+r.value,0);
+  const names={Dry:'Dry (kibble)',Wet:'Wet (canned or pouch)','Air-dried or freeze-dried':'Air-dried or freeze-dried'};
+  const st=el('div','stack');const lg=el('div','slegend');
+  fm.forEach((r,i)=>{
+    const seg=el('div','seg s'+(i+1),String(r.value));seg.style.flex=r.value+' 1 0';seg.tabIndex=0;
+    seg.setAttribute('aria-label',names[r.item]+': '+r.value+' products');
+    bindTip(seg,[[r.value+' products',names[r.item]]]);st.appendChild(seg);
+    const l=el('span');const sw=el('i');sw.style.background='var(--seg'+(i+1)+')';l.appendChild(sw);l.appendChild(document.createTextNode(names[r.item]+', '+r.value));lg.appendChild(l);
+  });
+  body.append(st,lg);
+  tableView(root,['Format','Products'],fm.map(r=>[names[r.item],String(r.value)]).concat([['Total',String(total)]]));
+})();
+
+/* ---- 06 full table ---- */
+(function(){
+  const t=document.getElementById('t-all');
+  const head=['Block','Item','Group or comparison','Measure','Value','Sources','Note'];
+  const th=el('thead'),tr=el('tr');head.forEach(h=>tr.appendChild(el('th',null,h)));th.appendChild(tr);t.appendChild(th);
+  const tb=el('tbody');
+  rows.forEach(r=>{const x=el('tr');
+    [r.block,r.item,r.group,r.measure.replace(/_/g,' '),r.value+(r.unit&&r.unit!=='x'?' '+r.unit:(r.unit==='x'?'×':'')),r.sources.replace(/;/g,' '),r.note||''].forEach((c,i)=>x.appendChild(el('td',i===4||i===5?'n':null,c)));
+    tb.appendChild(x)});
+  t.appendChild(tb);
+})();
+
+/* ---- embed height ---- */
+function post(){try{parent.postMessage({type:'cat-food-contaminants:height',height:Math.ceil(document.documentElement.getBoundingClientRect().height)},'*')}catch(e){}}
+if('ResizeObserver' in window){new ResizeObserver(post).observe(document.documentElement)}
+addEventListener('load',post);addEventListener('resize',post);
+})();
+</script>
+</body>
+</html>

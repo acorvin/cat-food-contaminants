@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contaminants in Cat Food, 2026 (study)</title>
+<meta name="description" content="What an independent laboratory found when the Clean Label Project tested 100 cat foods from 62 brands, drawn from the figures in its published report. A data study by Alex Corvin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#ffffff;
+  --ink:#1c1e21;
+  --ink-2:#55585e;
+  --ink-3:#6f7379;
+  --hair:#d6d7d4;
+  --post:#ad7620;
+  --telegraph:#914355;
+  --radio:#009080;
+  --internet:#6172be;
+  --f:"Geist", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"Geist Mono", ui-monospace, Menlo, monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--ground);color:var(--ink)}
+body{font-family:var(--f);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.sheet{max-width:1400px;margin:0 auto;padding-inline:clamp(16px,4vw,64px);padding-block:clamp(32px,6vw,80px) 48px}
+a{color:inherit;text-decoration-color:var(--ink-3);text-underline-offset:3px}
+:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+
+header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px 64px;align-items:start}
+@media (max-width:900px){header{grid-template-columns:minmax(0,1fr)}}
+h1{margin:0;font-weight:300;font-size:clamp(40px,5.2vw,72px);line-height:1;letter-spacing:-.03em}
+.sub{margin:18px 0 0;font-size:clamp(19px,1.7vw,23px);font-weight:400;line-height:1.3;color:var(--ink);max-width:30ch;text-wrap:balance}
+.deck{margin:18px 0 0;font-size:16px;color:var(--ink-2);max-width:50ch;text-wrap:pretty}
+.caveat{margin:14px 0 0;font-size:16px;font-weight:500;color:var(--ink);max-width:50ch;text-wrap:pretty}
+.key{width:360px;max-width:100%}
+.key svg{display:block;width:100%;height:auto;overflow:visible}
+.key text{font-family:var(--f);font-size:12.5px;fill:var(--ink-2)}
+.key .h{font-size:11.5px;fill:var(--ink-3);letter-spacing:.08em;text-transform:uppercase;font-family:var(--f-mono)}
+.swatches{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:13px;color:var(--ink-2)}
+.swatches span{display:inline-flex;align-items:center;gap:7px}
+.swatches i{width:16px;height:3px;display:inline-block}
+
+.figure{margin-top:clamp(40px,5vw,72px)}
+.stage{position:relative;width:100%}
+.stage svg{position:absolute;left:0;top:0;overflow:visible}
+.ax{font-family:var(--f-mono);font-size:11.5px;fill:var(--ink-3)}
+.hair{stroke:var(--hair);stroke-width:1}
+.base{stroke:var(--ink-3);stroke-width:1}
+.yr{font-size:26px;font-weight:300;letter-spacing:-.02em;fill:var(--ink)}
+.nm{font-size:13px;fill:var(--ink-2)}
+.nm0{font-size:14px;fill:var(--ink)}
+.nm3{font-size:13px;fill:var(--ink-3)}
+.val{font-size:19px;font-weight:300;letter-spacing:-.02em;fill:var(--ink)}
+.big{font-size:30px;font-weight:300;letter-spacing:-.03em}
+.vg{stroke:var(--hair);stroke-width:.8}
+.one{stroke:var(--ink-3);stroke-width:1}
+.cannot{margin-top:clamp(40px,5vw,64px);padding-top:20px;border-top:1px solid var(--hair)}
+.cannot h2{margin:0 0 18px;font-family:var(--f-mono);font-size:10.5px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 64px;font-size:14px;color:var(--ink-2)}
+@media (max-width:760px){.cgrid{grid-template-columns:minmax(0,1fr)}}
+.cgrid h3{margin:0 0 4px;font-size:15px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+.cgrid p{margin:0;max-width:56ch;text-wrap:pretty}
+.md{font-size:15px;fill:var(--ink);letter-spacing:-.01em}
+.col{transition:opacity .12s}
+.col.dim{opacity:.3}
+.grp{font-family:var(--f-mono);font-size:11.5px;fill:var(--ink-3);letter-spacing:.06em;text-transform:uppercase}
+.note{font-size:13px;fill:var(--ink-2)}
+.lead{stroke:var(--ink-3);stroke-width:.75;fill:none}
+.ring{stroke:var(--ground);stroke-width:2}
+
+.tip{position:absolute;z-index:3;pointer-events:none;width:280px;background:var(--ground);border:1px solid var(--hair);box-shadow:0 1px 0 rgba(0,0,0,.03);padding:12px 14px;font-size:13.5px;line-height:1.45;opacity:0;transition:opacity .12s}
+.tip.on{opacity:1}
+.tip b{font-weight:500}
+.tip .m{color:var(--ink-3);font-size:12px;margin-top:2px}
+.tip .w{margin-top:8px}
+.tip .s{margin-top:8px;color:var(--ink-2);font-size:12.5px}
+
+footer{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;font-size:13px;color:var(--ink-2)}
+@media (max-width:900px){footer{grid-template-columns:minmax(0,1fr)}}
+footer p{margin:0;max-width:62ch;text-wrap:pretty}
+footer .by{color:var(--ink-3)}
+footer .src{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px 28px;padding-top:18px;border-top:1px solid var(--hair)}
+footer .src span{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);width:100%}
+
+details{margin-top:clamp(28px,4vw,48px);font-size:13px;color:var(--ink-2)}
+summary{cursor:pointer;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.tw{overflow-x:auto;margin-top:14px}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:7px 14px 7px 0;border-bottom:1px solid var(--hair);vertical-align:top}
+th{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:400;white-space:nowrap}
+td.n{font-family:var(--f-mono);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.tip,.col{transition:none}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <div>
+      <h1>Contaminants in Cat Food, 2026</h1>
+      <p class="sub">What an independent laboratory found in 100 cat foods from 62 brands, drawn from the figures in the Clean Label Project's report</p>
+      <p class="deck" id="deck"></p>
+      <p class="caveat">Found does not mean harmful. The report gives detection rates and multiples, not amounts, and says no regulatory limits apply.</p>
+    </div>
+    <div class="key">
+      <svg id="key" viewBox="0 0 340 236" role="img" aria-label="How to read the figure"></svg>
+      <div class="swatches" id="swatches"></div>
+    </div>
+  </header>
+
+  <div class="figure">
+    <div class="stage" id="stage">
+      <svg id="fig" role="img" aria-label="A study in four parts. First, a grid of 100 dots for each of eleven substances, where each dot is one cat food and filled dots are the products in which the substance was found. Second, seven clusters of dots that compare groups of products, such as fish-based and other wet foods for mercury. Third, three grids of 100 dots that show the share of poultry and of fish and seafood products that met the study's standard, and the share of fish and seafood products that ranked among the highest for mercury. Fourth, one row of 100 dots that shows the products by format."></svg>
+      <div class="tip" id="tip" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="cannot">
+    <h2>04 · What the figures cannot show</h2>
+    <div class="cgrid">
+      <div><h3>Which products or brands</h3><p>The Clean Label Project has not released results for individual products. Each row of dots is a count and not a list, so nothing here says which cat foods were affected.</p></div>
+      <div><h3>How the substances overlap</h3><p>The report gives each substance's rate separately. It does not say how many products had all three metals at once, or how many had none.</p></div>
+      <div><h3>How much, in absolute terms</h3><p>The figures are detection rates and multiples, not amounts. A large multiple of a small amount and a small multiple of a large amount look the same here. The report says no regulatory limits apply, and its executive director told CNN the study does not determine whether a specific product will harm a cat.</p></div>
+      <div><h3>How much products vary</h3><p>Each product was tested from a single batch, and the group sizes behind the multiples and shares are not published. The sample was <span id="mix"></span>.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p id="foot1"></p>
+    <p class="by" id="foot2"></p>
+    <div class="src" id="src"><span>Sources</span></div>
+  </footer>
+
+  <details>
+    <summary>View every figure as a table</summary>
+    <div class="tw"><table id="tbl"></table></div>
+  </details>
+</div>
+
+<script>
+const DATA = [{"block": "detection", "item": "Lead", "group": "Heavy metals", "measure": "products_detected", "value": 99, "unit": "of 100 products", "sources": "R;W;C;N", "note": ""}, {"block": "detection", "item": "Cadmium", "group": "Heavy metals", "measure": "products_detected", "value": 96, "unit": "of 100 products", "sources": "R;W;C;N", "note": ""}, {"block": "detection", "item": "Arsenic", "group": "Heavy metals", "measure": "products_detected", "value": 94, "unit": "of 100 products", "sources": "R;W;C;N", "note": ""}, {"block": "detection", "item": "Glyphosate", "group": "Glyphosate and its breakdown product", "measure": "products_detected", "value": 37, "unit": "of 100 products", "sources": "R;W;C", "note": "Herbicide"}, {"block": "detection", "item": "AMPA", "group": "Glyphosate and its breakdown product", "measure": "products_detected", "value": 12, "unit": "of 100 products", "sources": "R;W", "note": "Breakdown product of glyphosate"}, {"block": "detection", "item": "DEHP", "group": "Plastic chemicals", "measure": "products_detected", "value": 48, "unit": "of 100 products", "sources": "R;W;C", "note": "Plasticizer; a Toxic Free Future scientist quoted by CNN says it was detected in about half of the products"}, {"block": "detection", "item": "Dibutyl phthalate", "group": "Plastic chemicals", "measure": "products_trace", "value": 26, "unit": "of 100 products", "sources": "R;W", "note": "Detected in 26 products but never at a quantifiable level"}, {"block": "detection", "item": "Dihexyl phthalate", "group": "Plastic chemicals", "measure": "products_detected", "value": 0, "unit": "of 100 products", "sources": "R", "note": "Not detected in any product"}, {"block": "detection", "item": "BPA", "group": "Plastic chemicals", "measure": "products_detected", "value": 2, "unit": "of 100 products", "sources": "R", "note": "Bisphenol"}, {"block": "detection", "item": "BPS", "group": "Plastic chemicals", "measure": "products_detected", "value": 1, "unit": "of 100 products", "sources": "R", "note": "Bisphenol"}, {"block": "detection", "item": "Acrylamide", "group": "Acrylamide", "measure": "products_measurable", "value": 4, "unit": "of 100 products", "sources": "R", "note": "Measurable levels"}, {"block": "detection", "item": "Acrylamide", "group": "Acrylamide", "measure": "products_trace", "value": 24, "unit": "of 100 products", "sources": "R", "note": "Very low levels in an additional 24 products"}, {"block": "comparison", "item": "Mercury", "group": "Fish and seafood vs other proteins", "measure": "multiple", "value": 18, "unit": "x", "sources": "R;W;P;C", "note": "Stated as about 18x"}, {"block": "comparison", "item": "Mercury", "group": "Fish-based wet vs wet made with other proteins", "measure": "multiple", "value": 28, "unit": "x", "sources": "W;P;C", "note": "Stated on the study page and in the press release; the multiple appears as a chart label in the report and is not in its running text"}, {"block": "comparison", "item": "Cadmium", "group": "Fish and seafood vs other products", "measure": "multiple", "value": 2.5, "unit": "x", "sources": "R;W;P;C", "note": "Stated as about 2.5x"}, {"block": "comparison", "item": "Lead", "group": "Dry vs wet or air-dried", "measure": "multiple", "value": 3, "unit": "x", "sources": "R;W;P;C;N", "note": "Stated as roughly 3x"}, {"block": "comparison", "item": "Lead", "group": "Highest-lead products vs the typical product", "measure": "multiple", "value": 3.5, "unit": "x", "sources": "R;W", "note": "Stated as about 3.5x"}, {"block": "comparison", "item": "DEHP", "group": "Canned and pouched vs bagged", "measure": "multiple", "value": 5, "unit": "x", "sources": "R;W;P", "note": "Stated as about 5x"}, {"block": "comparison", "item": "Glyphosate", "group": "Each added plant ingredient among the first ten listed", "measure": "percent_higher", "value": 40, "unit": "percent", "sources": "R;W;P;C", "note": "An association; stated as about 40% higher per ingredient"}, {"block": "standard", "item": "Met the standard", "group": "Poultry products", "measure": "share_meeting_standard", "value": 84.8, "unit": "percent", "sources": "R;W;P;C", "note": "Standard is set against the other products in the study"}, {"block": "standard", "item": "Met the standard", "group": "Fish and seafood products", "measure": "share_meeting_standard", "value": 25.7, "unit": "percent", "sources": "R;W;P;C", "note": "Standard is set against the other products in the study"}, {"block": "standard", "item": "Met the standard", "group": "Gap between poultry and fish and seafood", "measure": "percentage_points", "value": 59.1, "unit": "percentage points", "sources": "R", "note": ""}, {"block": "standard", "item": "Met the standard", "group": "Poultry vs fish and seafood likelihood", "measure": "multiple", "value": 3.3, "unit": "x", "sources": "R;W", "note": ""}, {"block": "standard", "item": "Met the standard", "group": "Largest difference between dry and wet formats", "measure": "percentage_points", "value": 1, "unit": "percentage points", "sources": "R", "note": "Formats were within one percentage point of each other"}, {"block": "standard", "item": "Mercury", "group": "Fish and seafood products ranked among the highest for mercury", "measure": "share_of_group", "value": 48.6, "unit": "percent", "sources": "R;W", "note": ""}, {"block": "sample", "item": "Products tested", "group": "All", "measure": "count", "value": 100, "unit": "products", "sources": "R;W;C", "note": "Purchased at retail; stated by the Clean Label Project to CNN. CNN calls them top-selling cat foods"}, {"block": "sample", "item": "Brands", "group": "All", "measure": "count", "value": 62, "unit": "brands", "sources": "R;W;C", "note": ""}, {"block": "sample", "item": "Substances screened", "group": "All", "measure": "count", "value": 122, "unit": "substances", "sources": "R;W;C", "note": "Stated as more than 122"}, {"block": "sample", "item": "Dry", "group": "Format", "measure": "count", "value": 31, "unit": "products", "sources": "R;W", "note": "Kibble"}, {"block": "sample", "item": "Wet", "group": "Format", "measure": "count", "value": 40, "unit": "products", "sources": "R;W", "note": "Canned or pouch"}, {"block": "sample", "item": "Air-dried or freeze-dried", "group": "Format", "measure": "count", "value": 29, "unit": "products", "sources": "R;W", "note": ""}];
+(function () {
+const rows = DATA;
+const by = b => rows.filter(r => r.block === b);
+const css = getComputedStyle(document.documentElement);
+const tok = k => css.getPropertyValue('--' + k).trim();
+const hex = h => { const n = parseInt(h.slice(1), 16); return [n >> 16, (n >> 8) & 255, n & 255]; };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const fmtN = v => Number.isInteger(v) ? String(v) : String(v);
+const rng = seed => () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+
+const FAMS = [
+  {name: 'Heavy metals', color: tok('internet')},
+  {name: 'Glyphosate and its breakdown product', color: tok('radio')},
+  {name: 'Plastic chemicals', color: tok('telegraph')},
+  {name: 'Acrylamide', color: tok('post')}
+];
+const INK = tok('ink');
+const SOURCE = {R: 'the report', W: 'the study page', P: 'the press release', C: 'news coverage', N: 'Newsweek'};
+
+// ---- data
+const items = [];
+by('detection').forEach(r => {
+  let it = items.find(i => i.item === r.item);
+  if (!it) { it = {item: r.item, fam: FAMS.findIndex(f => f.name === r.group), solid: 0, trace: 0, src: r.sources}; items.push(it); }
+  if (r.measure === 'products_trace') it.trace += r.value; else it.solid += r.value;
+});
+items.forEach(i => { i.total = i.solid + i.trace; });
+items.sort((a, b) => a.fam - b.fam || b.total - a.total);
+const byName = n => items.find(i => i.item === n);
+
+const comps = by('comparison').map(r => ({
+  item: r.item, what: r.group, raw: r.value, assoc: r.measure === 'percent_higher',
+  v: r.measure === 'percent_higher' ? 1 + r.value / 100 : r.value,
+  fam: r.item === 'DEHP' ? 2 : r.item === 'Glyphosate' ? 1 : 0, src: r.sources
+})).sort((a, b) => b.v - a.v);
+
+const S = by('standard');
+const sval = g => S.find(r => r.group === g).value;
+const fans = [
+  {name: 'Poultry products', what: 'met the standard', pct: sval('Poultry products'), color: tok('ink-3'), src: S.find(r => r.group === 'Poultry products').sources},
+  {name: 'Fish and seafood products', what: 'met the standard', pct: sval('Fish and seafood products'), color: tok('ink-3'), src: S.find(r => r.group === 'Fish and seafood products').sources},
+  {name: 'Fish and seafood products', what: 'ranked among the highest for mercury', pct: sval('Fish and seafood products ranked among the highest for mercury'), color: FAMS[0].color, src: S.find(r => r.item === 'Mercury').sources}
+];
+const sample = by('sample').filter(r => r.group === 'Format');
+const gapPts = sval('Gap between poultry and fish and seafood'), ratio = sval('Poultry vs fish and seafood likelihood');
+const lead = byName('Lead'), cad = byName('Cadmium'), ars = byName('Arsenic');
+const merWet = comps.find(c => c.item === 'Mercury' && /wet/.test(c.what));
+
+document.getElementById('deck').textContent =
+  `Lead was found in ${lead.total} of the 100 products, cadmium in ${cad.total} and arsenic in ${ars.total}. ` +
+  `Among wet foods, the fish-based products carried about ${merWet.raw} times the mercury of wet foods made with other proteins.`;
+document.getElementById('swatches').innerHTML = FAMS.map(f => `<span><i style="background:${f.color}"></i>${esc(f.name)}</span>`).join('');
+document.getElementById('foot1').innerHTML =
+  `The figures are the summary figures in the Clean Label Project's 2026 Cat Food Category Report, from an independent laboratory that tested 100 top-selling cat foods bought at retail, each from a single batch. The report does not release results for individual products, so each row of dots is a count of products and not a list of them, and nothing here identifies a brand. The standard in the third part is the Clean Label Project's own and is set against the other products in the study, and the report says no regulatory limits apply. The Pet Food Institute has objected to that standard, as <a href="https://www.newsweek.com/heavy-metals-in-cat-food-safer-brands-as-study-examines-toxic-materials-12519532" target="_blank" rel="noopener">Newsweek reported</a>. Finding a substance in a product does not mean it harmed a cat.`;
+document.getElementById('foot2').innerHTML =
+  `Every figure, with the places that confirm it, is in the table below and in the <a href="data/cat-food-contaminants.csv" download>CSV file</a>. The mercury multiple for fish-based wet food is on the study page and in the press release, and the report prints it only as a chart label. The multiple for glyphosate is an association the report found between the amount and the number of plant ingredients. A data study by Alex Corvin, 2026.`;
+document.getElementById('src').insertAdjacentHTML('beforeend', [
+  ['Clean Label Project, Cat Food Category Report', 'https://cleanlabelproject.org/wp-content/uploads/clean-label-project-cat-food-study-2026.pdf'],
+  ['Clean Label Project, Cat Food Study', 'https://cleanlabelproject.org/cat-food-study/'],
+  ['CNN', 'https://www.cnn.com/2026/10/02/health/cat-food-toxins-wellness'],
+  ['Scripps News', 'https://www.scrippsnews.com/science-and-tech/cat-food-investigation-finds-heavy-metals-pesticides-and-plastic-chemicals'],
+  ['Newsweek', 'https://www.newsweek.com/heavy-metals-in-cat-food-safer-brands-as-study-examines-toxic-materials-12519532']
+].map(([t, u]) => `<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(''));
+
+(function table() {
+  const t = document.getElementById('tbl');
+  const head = ['Block', 'Item', 'Group or comparison', 'Measure', 'Value', 'Confirmed in'];
+  t.innerHTML = '<thead><tr>' + head.map(h => `<th>${h}</th>`).join('') + '</tr></thead><tbody>' + rows.map(r =>
+    `<tr><td>${esc(r.block)}</td><td>${esc(r.item)}</td><td>${esc(r.group)}</td><td>${esc(r.measure.replace(/_/g, ' '))}</td>` +
+    `<td class="n">${esc(fmtN(r.value))}${r.unit === 'x' ? '×' : r.unit ? ' ' + esc(r.unit) : ''}</td>` +
+    `<td>${r.sources.split(';').map(c => SOURCE[c]).join(', ')}</td></tr>`).join('') + '</tbody>';
+})();
+
+// ---- layout
+const stage = document.getElementById('stage'), svg = document.getElementById('fig'), tip = document.getElementById('tip');
+const NS = 'http://www.w3.org/2000/svg';
+let W, H, dpr, glyphs = [], focus = null, NARROW = false;
+document.getElementById('mix').textContent = sample.map(r => `${r.value} ${r.item === 'Dry' ? 'dry' : r.item === 'Wet' ? 'wet' : 'air-dried or freeze-dried'}`).join(', ') + ' products';
+
+const el = (tag, attrs, parent) => { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); (parent || svg).appendChild(n); return n; };
+const txt = (parent, cls, x, y, s, extra) => { const t = el('text', Object.assign({'class': cls, x, y}, extra || {}), parent); t.textContent = s; return t; };
+const wrap = (text, n) => text.split(' ').reduce((ls, w) => { const l = ls[ls.length - 1]; if (l && (l + ' ' + w).length <= n) ls[ls.length - 1] = l + ' ' + w; else ls.push(w); return ls; }, []);
+const para = (parent, cls, x, y, text, n, lh, anchor) => { const t = el('text', {'class': cls, x, y, 'text-anchor': anchor || 'start'}, parent); wrap(text, n).forEach((l, i) => { const s = el('tspan', {x, dy: i ? lh : 0}, t); s.textContent = l; }); return t; };
+const charsFor = px => Math.max(14, Math.floor(px / 6.7));
+
+// ---- dots, drawn as SVG so they stay sharp at any size
+const sv = (parent, tag, a) => el(tag, a, parent);
+// one row of dots: filled = found, pale with an outline = trace levels only, open ring = not found.
+// A share row's last dot is drawn open, with a filled disc whose area is the fraction of a point.
+function renderDots(g) {
+  if (!g.pts.length) return;
+  const grp = sv(g.node, 'g', {'class': 'dots', 'aria-hidden': 'true'});
+  for (const p of g.pts) {
+    if (p.kind === 'lit') {
+      if (p.f < 1) {
+        sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.88, fill: 'none', stroke: g.color, 'stroke-opacity': 0.55, 'stroke-width': 1});
+        sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.88 * Math.sqrt(p.f), fill: g.color, 'fill-opacity': 0.9});
+      } else sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.88, fill: g.color, 'fill-opacity': 0.88 * (p.a || 1)});
+    } else if (p.kind === 'trace') sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.88, fill: g.color, 'fill-opacity': 0.32, stroke: g.color, 'stroke-opacity': 0.85, 'stroke-width': 1});
+    else sv(grp, 'circle', {cx: p.x, cy: p.y, r: g.rr * 0.5, fill: 'none', stroke: g.color, 'stroke-opacity': 0.8, 'stroke-width': 1});
+  }
+}
+// one multiple on the log scale: an open dot at 1x (the group compared with) and a filled dot at the multiple
+function renderMult(g) {
+  const grp = sv(g.node, 'g', {'class': 'dots', 'aria-hidden': 'true'});
+  sv(grp, 'line', {x1: g.x1, x2: g.xv, y1: g.cy, y2: g.cy, stroke: g.color, 'stroke-opacity': 0.5, 'stroke-width': 1});
+  sv(grp, 'circle', {cx: g.x1, cy: g.cy, r: 3.4, fill: 'none', stroke: g.color, 'stroke-width': 1.2});
+  if (g.hollow) sv(grp, 'circle', {cx: g.xv, cy: g.cy, r: 6.4, fill: g.color, 'fill-opacity': 0.16, stroke: g.color, 'stroke-width': 1.6});
+  else sv(grp, 'circle', {cx: g.xv, cy: g.cy, r: 6.8, fill: g.color, 'fill-opacity': 0.9});
+}
+const render = g => g.type === 'mult' ? renderMult(g) : renderDots(g);
+
+const MULT_TEXT = {
+  'Fish-based wet vs wet made with other proteins': 'Within wet foods only: fish-based wet foods vs wet foods made with other proteins, a subset of the row above',
+  'Fish and seafood vs other proteins': 'Fish and seafood foods vs foods made with other proteins',
+  'Fish and seafood vs other products': 'Fish and seafood foods vs other foods',
+  'Dry vs wet or air-dried': 'Dry foods vs wet and air-dried foods',
+  'Highest-lead products vs the typical product': 'The highest-lead products vs the typical product, which compares products and not two food groups',
+  'Canned and pouched vs bagged': 'Canned and pouched foods vs bagged foods'
+};
+const MULT_GROUPS = [
+  ['By protein', ['Fish and seafood vs other proteins', 'Fish-based wet vs wet made with other proteins', 'Fish and seafood vs other products']],
+  ['By format and packaging', ['Dry vs wet or air-dried', 'Canned and pouched vs bagged']],
+  ['Across all products', ['Highest-lead products vs the typical product']]
+];
+const NESTED = 'Fish-based wet vs wet made with other proteins';
+
+function layout() {
+  W = Math.max(300, stage.parentNode.clientWidth); NARROW = W < 760;
+  dpr = Math.min(2, window.devicePixelRatio || 1);
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  glyphs = [];
+  const LC = NARROW ? 0 : 170, VC = NARROW ? 0 : 92, per = NARROW ? 50 : 100;
+  const dotsX0 = LC, dotsW = W - LC - VC, pitch = dotsW / per, rr = pitch * 0.44;
+  let y = 8;
+
+  const sect = (no, title, desc) => {
+    el('line', {'class': 'hair', x1: 0, x2: W, y1: y, y2: y});
+    txt(svg, 'grp', 0, y + 22, `${no} · ${title}`);
+    const t = para(svg, 'note', 0, y + 42, desc, charsFor(Math.min(W, 860)), 16);
+    y += 42 + (t.childNodes.length - 1) * 16 + 30;
+  };
+  const gnode = () => el('g', {'class': 'col'});
+
+  // one row of dots: filled for the count, pale for trace, open for the rest
+  const dotRow = o => {
+    const g = {type: 'row', kind: o.kind, color: o.color, seed: o.seed, p: pitch, rr, pts: [], it: o.it, f: o.f};
+    g.node = el('g', {'class': 'col'});
+    const node = g.node, top = y;
+    let cy, rowH, dy0;
+    if (!NARROW) {
+      const nameLines = wrap(o.name, 26), subLines = o.sub ? wrap(o.sub, 26) : [], nl = nameLines.length + subLines.length;
+      rowH = Math.max(32, nl * 15 + 12); cy = top + rowH / 2;
+      let ty = cy - (nl - 1) * 7.5 + 4;
+      nameLines.forEach(l => { txt(node, 'nm0', 0, ty, l); ty += 15; });
+      subLines.forEach(l => { txt(node, 'nm3', 0, ty, l); ty += 15; });
+      txt(node, 'val', dotsX0 + dotsW + 16, cy + 7, o.valText);
+      dy0 = cy - pitch / 2;
+    } else {
+      txt(node, 'nm0', 0, top + 14, o.name);
+      txt(node, 'val', W, top + 17, o.valText, {'text-anchor': 'end'});
+      if (o.sub) txt(node, 'nm3', 0, top + 30, o.sub);
+      dy0 = top + (o.sub ? 40 : 28); rowH = (dy0 - top) + 2 * pitch + 16; cy = dy0 + pitch / 2;
+    }
+    for (let k = 0; k < 100; k++) {
+      const kind = k < o.solid ? 'lit' : k < o.solid + o.trace ? 'trace' : 'off';
+      const f = o.partial && k === o.solid ? o.partial : 1;
+      const lit = kind === 'lit' || (o.partial && k === o.solid);
+      g.pts.push({x: dotsX0 + ((k % per) + 0.5) * pitch, y: dy0 + (Math.floor(k / per) + 0.5) * pitch, kind: lit ? 'lit' : kind, f: lit && k === o.solid && o.partial ? o.partial : 1});
+    }
+    g.x0 = dotsX0; g.y0 = dy0; g.w = dotsW; g.h = pitch * (NARROW ? 2 : 1);
+    g.hover = {x: 0, y: top, w: W, h: rowH};
+    glyphs.push(g); y += rowH;
+    return {g, cy, rowH};
+  };
+
+  // ---- part 1
+  sect('01', 'How often each substance was found', 'Each row has 100 dots, one for each product, so the filled part of a row is the number of products in which the substance was found. A pale dot with an outline means it was found only at trace levels, and an open ring means it was not found. Rows are counts and not lists, because the report does not say which products.');
+  const FAMNOTE = {0: 'Lead, cadmium and arsenic were each found in more than nine of every ten products.', 2: 'Dibutyl phthalate was seen in 26 products but never at a level the laboratory could quantify, so all 26 are drawn pale. Dihexyl phthalate was not found in any product.', 3: 'Measurable in 4 products and present at very low levels in 24 more.'};
+  FAMS.forEach((f, k) => {
+    el('rect', {x: 0, y: y + 4, width: 14, height: 3, fill: f.color});
+    txt(svg, 'grp', 22, y + 10, f.name);
+    y += 22;
+    items.filter(i => i.fam === k).forEach((it, j) => dotRow({kind: 'sub', name: it.item, valText: String(it.total), solid: it.solid, trace: it.trace, color: f.color, it, seed: 11 + k * 31 + j * 7}));
+    if (FAMNOTE[k]) {
+      const t = para(svg, 'nm3', NARROW ? 0 : dotsX0, y + 16, FAMNOTE[k], charsFor(NARROW ? W : dotsW), 16);
+      y += 16 + (t.childNodes.length - 1) * 16 + 6;
+    }
+    y += 22;
+  });
+
+  // ---- part 2
+  y += 14;
+  sect('02', 'How much more, by ingredient, format and packaging', 'Each row compares two groups of products. The open dot at 1× is the group it is compared with, and the filled dot is the other group, at the number of times as much that the report states. The scale is logarithmic, so equal distances are equal ratios. These are ratios against different baselines, so a longer row does not mean a worse food.');
+  const AX0 = NARROW ? 10 : 354, AX1 = W - (NARROW ? 54 : 70);
+  const ax = v => AX0 + (AX1 - AX0) * Math.log(v) / Math.log(30);
+  const ticks = [1, 2, 5, 10, 20, 30];
+  const tickRow = (yy) => ticks.forEach(v => txt(svg, 'ax', ax(v), yy, v + '×', {'text-anchor': v === 1 ? 'start' : 'middle'}));
+  const vgG = el('g', {});
+  const axTop = y; tickRow(y + 8); y += 22;
+  const rowsTop = y;
+  MULT_GROUPS.forEach(([gname, list]) => {
+    txt(svg, 'grp', 0, y + 14, gname); y += 26;
+    list.map(w => comps.find(c => c.what === w)).forEach(cp => {
+      const nested = cp.what === NESTED, ind = nested && !NARROW ? 16 : 0;
+      const g = {type: 'mult', kind: 'mult', color: FAMS[cp.fam].color, cp, x1: ax(1), xv: ax(cp.v), hollow: /Highest-lead/.test(cp.what)};
+      g.node = el('g', {'class': 'col'});
+      const desc = wrap(MULT_TEXT[cp.what], charsFor((NARROW ? W : 300) - ind)), top = y;
+      let cy, rowH;
+      if (!NARROW) {
+        rowH = Math.max(60, 40 + desc.length * 15); cy = top + 24;
+        if (nested) el('path', {d: `M4,${top + 2} V${cy + 2} H12`, fill: 'none', stroke: tok('ink-3'), 'stroke-width': 1}, g.node);
+        txt(g.node, 'nm0', ind, cy - 6, cp.item).setAttribute('font-weight', '500');
+        desc.forEach((l, i) => txt(g.node, 'nm3', ind, cy + 11 + i * 15, l));
+      } else {
+        txt(g.node, 'nm0', 0, top + 14, cp.item);
+        desc.forEach((l, i) => txt(g.node, 'nm3', 0, top + 30 + i * 15, l));
+        cy = top + 30 + desc.length * 15 + 12; rowH = cy - top + 22;
+      }
+      g.cy = cy; txt(g.node, 'md', g.xv + 14, cy + 5, fmtN(cp.raw) + '×');
+      g.x0 = g.x1 - 10; g.y0 = cy - 12; g.w = g.xv - g.x1 + 24; g.h = 24;
+      g.hover = {x: 0, y: top, w: W, h: rowH};
+      glyphs.push(g); y += rowH;
+    });
+    y += 6;
+  });
+  const rowsBottom = y; tickRow(y + 6);
+  const segs = NARROW ? glyphs.filter(g => g.type === 'mult').map(g => [g.cy - 13, g.cy + 13]) : [[axTop + 16, rowsBottom - 4]];
+  ticks.forEach(v => segs.forEach(([ya, yb]) => el('line', {'class': v === 1 ? 'one' : 'vg', x1: ax(v), x2: ax(v), y1: ya, y2: yb}, vgG)));
+  txt(svg, 'ax', AX0, rowsBottom + 24, 'the group compared with', {'text-anchor': 'start'});
+  y += 44;
+
+  // glyphosate is an association, not a ratio between two groups
+  const cpG = comps.find(c => c.assoc);
+  const gg = {type: 'assoc', kind: 'assoc', color: FAMS[cpG.fam].color, cp: cpG, pts: [], x0: 0, y0: y, w: 1, h: 1, seed: 3};
+  gg.node = el('g', {'class': 'col'});
+  txt(gg.node, 'grp', 0, y + 8, 'A different kind of figure');
+  y += 30;
+  const gTop = y;
+  txt(gg.node, 'nm0', 0, y + 14, cpG.item).setAttribute('font-weight', '500');
+  const gd = wrap('Each added plant ingredient among the first ten listed', charsFor(NARROW ? W : 300));
+  gd.forEach((l, i) => txt(gg.node, 'nm3', 0, y + 30 + i * 15, l));
+  const nx = NARROW ? 0 : AX0, ny = NARROW ? y + 30 + gd.length * 15 + 40 : y + 34;
+  const big = txt(gg.node, 'val big', nx, ny, '+' + cpG.raw + '%'); big.setAttribute('fill', cpG.fam === 1 ? FAMS[1].color : INK);
+  const gtx = para(gg.node, 'note', NARROW ? 0 : nx + 108, NARROW ? ny + 24 : ny - 16, `The report found about ${cpG.raw}% more glyphosate for each added plant ingredient. This is an association between the amount and the number of plant ingredients, and not a ratio between two groups of products.`, charsFor(NARROW ? W : Math.min(W - nx - 120, 520)), 15);
+  const gH = NARROW ? ny + 24 + (gtx.childNodes.length - 1) * 16 + 20 - gTop : Math.max(70, 36 + (gtx.childNodes.length) * 16);
+  gg.hover = {x: 0, y: gTop - 6, w: W, h: gH + 10};
+  glyphs.push(gg); y = gTop + gH + 16;
+
+  const tk = para(svg, 'note', 0, y, 'Different choices raise different contaminants. Fish raises mercury and cadmium, dry food raises lead, and canned or pouched food raises DEHP. The Clean Label Project told CNN that chicken did better on mercury and cadmium but showed higher rates of lead and herbicides, so no category was clean.', charsFor(Math.min(W, 860)), 15);
+  y += (tk.childNodes.length - 1) * 16 + 44;
+
+  // ---- part 3
+  sect('03', "The Clean Label Project's own standard", `Each row has 100 dots, one for each percentage point of its group, and the group sizes are not published. A filled dot meets the standard, or ranks among the highest for mercury in the last row, and an open ring does not. The standard is relative: each product is measured against the other cat foods in this study. It is not a safety limit, and the report says no regulatory limits apply.`);
+  const sh = fans.map((f, i) => ({f, name: f.name, sub: f.what}));
+  const rows3 = [];
+  sh.forEach((o, i) => {
+    const whole = Math.floor(o.f.pct), part = +(o.f.pct - whole).toFixed(3);
+    const r = dotRow({kind: 'share', name: o.name, sub: o.sub, valText: fmtN(o.f.pct) + '%', solid: whole, trace: 0, partial: part, color: o.f.color, f: o.f, seed: 91 + i * 17});
+    rows3.push(r);
+    if (i === 0 && !NARROW) y += 36; else if (i === 1) y += NARROW ? 6 : 22;
+  });
+  if (!NARROW) {
+    const xp = pct => dotsX0 + pct * pitch, ym = (rows3[0].cy + rows3[1].cy) / 2;
+    const x1 = xp(fans[1].pct), x2 = xp(fans[0].pct);
+    el('path', {'class': 'lead', d: `M${x2},${rows3[0].cy + 8} V${ym} H${x1} V${rows3[1].cy - 8}`});
+    txt(svg, 'nm', (x1 + x2) / 2, ym - 6, `${gapPts} percentage points, ${ratio} times as likely`, {'text-anchor': 'middle'});
+  } else {
+    const t = para(svg, 'nm3', 0, y + 6, `A gap of ${gapPts} percentage points. Poultry products were ${ratio} times as likely to meet the standard.`, charsFor(W), 15);
+    y += 6 + (t.childNodes.length - 1) * 15 + 12;
+  }
+  y += 20;
+
+  // ---- finish: size the stage, draw the dots, then add hover targets
+  H = Math.ceil(y);
+  stage.style.height = H + 'px';
+  svg.setAttribute('width', W); svg.setAttribute('height', H); svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  glyphs.forEach(render);
+  glyphs.forEach(g => {
+    const hv = g.hover;
+    const r = el('rect', {x: hv.x, y: hv.y, width: hv.w, height: hv.h, fill: 'transparent', tabindex: 0});
+    const show = ev => {
+      focus = g; glyphs.forEach(h => h.node && h.node.classList.toggle('dim', h !== g));
+      tipFor(g); tip.classList.add('on'); place(ev);
+    };
+    r.addEventListener('mouseenter', show);
+    r.addEventListener('focus', () => { const b = r.getBoundingClientRect(); show({clientX: b.left + Math.min(b.width / 2, 300), clientY: b.top + 30}); });
+    r.addEventListener('mousemove', place);
+    const off = () => { focus = null; glyphs.forEach(h => h.node && h.node.classList.remove('dim')); tip.classList.remove('on'); };
+    r.addEventListener('mouseleave', off); r.addEventListener('blur', off);
+  });
+}
+
+function tipFor(g) {
+  const from = src => 'Confirmed in ' + src.split(';').map(c => SOURCE[c]).join(', ') + '.';
+  let b, m, w, s;
+  if (g.kind === 'sub') {
+    const it = g.it; b = it.item; m = FAMS[it.fam].name;
+    w = `Found in ${it.total} of the 100 products.`;
+    s = it.item === 'Acrylamide' ? 'Measurable in 4, and at very low levels in 24 more.' : it.item === 'Dibutyl phthalate' ? 'Never at a level the laboratory could quantify.' : it.total === 0 ? 'Not found in any product.' : from(it.src);
+  } else if (g.kind === 'mult' || g.kind === 'assoc') {
+    const cp = g.cp; b = cp.item + ', ' + (cp.assoc ? `+${cp.raw}% for each ingredient` : fmtN(cp.raw) + '×'); m = cp.what;
+    w = cp.assoc ? 'An association, with about 40% more glyphosate for each added plant ingredient among the first ten listed.' : `About ${fmtN(cp.raw)} times as much ${cp.item === 'DEHP' ? 'DEHP' : cp.item.toLowerCase()}. This is a multiple and not an amount.`;
+    s = from(cp.src);
+  } else {
+    b = fmtN(g.f.pct) + '%'; m = g.f.name; w = `${g.f.what.charAt(0).toUpperCase()}${g.f.what.slice(1)}.`; s = from(g.f.src);
+  }
+  tip.innerHTML = `<b>${esc(b)}</b><div class="m">${esc(m)}</div><div class="w">${esc(w)}</div><div class="s">${esc(s)}</div>`;
+}
+function place(ev) {
+  const bb = stage.getBoundingClientRect(), mx = ev.clientX - bb.left, my = ev.clientY - bb.top;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = mx + 16, y = my - h - 12;
+  if (x + w > W) x = mx - w - 16;
+  if (x < 0) x = 0;
+  if (y < 0) y = my + 16;
+  tip.style.left = x + 'px'; tip.style.top = y + 'px';
+}
+
+// the reading key
+(function key() {
+  const k = document.getElementById('key');
+  const mk = (tag, a, p) => { const n = document.createElementNS(NS, tag); for (const q in a) n.setAttribute(q, a[q]); (p || k).appendChild(n); return n; };
+  const lines = (x, y, ls, a) => ls.forEach((s, i) => { const n = mk('text', Object.assign({x, y: y + i * 15}, a || {})); n.textContent = s; });
+  const blue = tok('internet'), red = tok('telegraph');
+  const dot = (x, y, r, col, o) => mk('circle', {cx: x, cy: y, r, fill: col, 'fill-opacity': o});
+  lines(0, 10, ['How to read it'], {'class': 'h'});
+  // a row of dots
+  const p = 15, y1 = 40;
+  for (let i = 0; i < 20; i++) {
+    const x = 6 + i * p;
+    if (i < 12) dot(x, y1, 5.2, blue, 0.88);
+    else if (i < 15) mk('circle', {cx: x, cy: y1, r: 5.2, fill: blue, 'fill-opacity': 0.26, stroke: blue, 'stroke-opacity': 0.6, 'stroke-width': 1});
+    else mk('circle', {cx: x, cy: y1, r: 3.2, fill: 'none', stroke: blue, 'stroke-opacity': 0.5, 'stroke-width': 0.9});
+  }
+  lines(0, y1 + 26, ['A row of dots is a count. Each dot is one product:', 'filled for found, pale for trace levels only,', 'and open for not found.']);
+  // a multiple
+  const ay = 140, x0 = 12, x1 = 240, ax = v => x0 + (x1 - x0) * Math.log(v) / Math.log(30);
+  mk('path', {'class': 'lead', d: `M${x0},${ay} H${x1}`});
+  [1, 3, 10, 30].forEach(v => { mk('path', {'class': 'lead', d: `M${ax(v)},${ay - 4} V${ay + 4}`}); const n = mk('text', {x: ax(v), y: ay + 18, 'text-anchor': v === 1 ? 'start' : 'middle', 'class': 'h'}); n.textContent = v + '×'; });
+  mk('path', {d: `M${ax(1)},${ay} H${ax(8)}`, stroke: red, 'stroke-opacity': 0.5, 'stroke-width': 1, fill: 'none'});
+  mk('circle', {cx: ax(1), cy: ay, r: 3.4, fill: 'none', stroke: red, 'stroke-width': 1.2});
+  dot(ax(8), ay, 6.8, red, 0.9);
+  lines(0, ay + 42, ['In part 2, the open dot at 1× is the group being', 'compared with, and the filled dot shows how many', 'times as much the other group had.']);
+})();
+
+layout();
+let lastW = stage.parentNode.clientWidth, rt = 0;
+new ResizeObserver(() => { const w = stage.parentNode.clientWidth; if (w === lastW) return; clearTimeout(rt); rt = setTimeout(() => { lastW = stage.parentNode.clientWidth; layout(); }, 150); }).observe(document.body);
+
+let lastH = 0;
+const post = () => { const h = Math.ceil(document.documentElement.getBoundingClientRect().height); if (h !== lastH) { lastH = h; window.parent.postMessage({type: 'cat-food-contaminants-study:height', height: h}, '*'); } };
+new ResizeObserver(post).observe(document.body); post();
+})();
+</script>
+</body>
+</html>
