@@ -4,6 +4,13 @@ Three pages that set out the figures published in the Clean Label Project's 2026
 
 All three pages use the report's summary figures only. The Clean Label Project has not released results for individual products, so there is no product-level data here.
 
+## Live pages
+
+- Explainer: https://acorvin.github.io/cat-food-contaminants/
+- Study (scrolling dot study): https://acorvin.github.io/cat-food-contaminants/study.html
+- Overview (every figure on one screen): https://acorvin.github.io/cat-food-contaminants/poster.html
+- Project page: https://alexcorvin.io/work/cat-food-contaminants
+
 ## Files
 
 - `docs/index.html` is the explanatory page with charts and table views, published with GitHub Pages from `main` and `/docs`.
